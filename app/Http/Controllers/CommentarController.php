@@ -9,10 +9,14 @@ use App\Models\User;
 
 class CommentarController extends Controller
 {
-    // Tampilkan daftar komentar
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
+
     public function index()
     {
-        $commentars = Commentar::with('user', 'news')->latest()->paginate(10); // Memuat data user dan news
+        $commentars = Commentar::with('user', 'news')->latest()->paginate(10); 
         return view('commentars.index', compact('commentars'));
     }
 
