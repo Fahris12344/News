@@ -1,11 +1,13 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NewsController;
 use App\Http\Middleware\AdminMiddleware;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CommentarController;
+use App\Http\Controllers\AnnouncementController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -15,10 +17,12 @@ Route::get('/', function () {
 Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::get('/dashboard', [AdminController::class, 'index'])->name('pages.admin.dashboard');
     Route::get('/category', [CategoryController::class, 'index'])->name('admin.category');
-    // Tambahkan route lainnya di sini
+    Route::resource('comments', CommentarController::class);
+    Route::resource('news', NewsController::class);
+    Route::resource('/announcement', AnnouncementController::class);
 });
 
-
+ 
 
 
 Route::middleware('auth')->group(function () {
