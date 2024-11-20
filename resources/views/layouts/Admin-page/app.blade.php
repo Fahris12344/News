@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ asset('assets-admin/vendors/feather/feather.css') }}">
     <link rel="stylesheet" href="{{ asset('assets-admin/vendors/ti-icons/css/themify-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('assets-admin/vendors/css/vendor.bundle.base.css') }}">
-    <!-- endinject -->
+    <!-- Endinject -->
     <!-- Plugin css for this page -->
     <link rel="stylesheet" href="{{ asset('assets-admin/vendors/datatables.net-bs4/dataTables.bootstrap4.css') }}">
     <link rel="stylesheet" href="{{ asset('assets-admin/vendors/ti-icons/css/themify-icons.css') }}">
@@ -20,6 +20,13 @@
     <link rel="stylesheet" href="{{ asset('assets-admin/css/vertical-layout-light/style.css') }}">
     <!-- endinject -->
     <link rel="shortcut icon" href="{{ asset('assets-admin/images/favicon.png') }}" />
+
+    <!-- Custom CSS for Sidebar -->
+    <style>
+        .sidebar {
+            position: fixed; 
+        }
+    </style>
 </head>
 
 <body>
@@ -63,6 +70,7 @@
     <script src="{{ asset('assets-admin/js/dashboard.js') }}"></script>
     <script src="{{ asset('assets-admin/js/Chart.roundedBarCharts.js') }}"></script>
     <!-- End custom js for this page-->
+
 </body>
 
 </html>

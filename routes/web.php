@@ -42,3 +42,9 @@ Route::get('/profile-school', function () {
 Route::get('/news', function () {
     return view('news');
 });
+
+//admin
+Route::get('/admin/dashboard', function () {
+    return view('pages.admin.dashboard');
+});
+
