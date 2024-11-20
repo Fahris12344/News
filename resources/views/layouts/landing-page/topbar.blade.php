@@ -11,11 +11,11 @@
      
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto active" href="/">Home</a></li>
           <!-- <li><a class="nav-link scrollto" href="#about">Visi|Misi</a></li> -->
-          <li><a class="nav-link scrollto" href="jurusan.html">Jurusan</a></li>
+          <li><a class="nav-link scrollto" href="jurusan.html">Berita</a></li>
           <!-- <li><a class="nav-link scrollto" href="#Galeri">Galeri</a></li> -->
-          <li><a class="nav-link scrollto" href="#Guru">Guru</a></li>
+          <li><a class="nav-link scrollto" href="#">Contact</a></li>
           <li class="dropdown"><a href="#"><span>Opsi Lain</span><i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="eskul.html">Eskul</a></li>
@@ -31,7 +31,7 @@
               <li><a href="https://acsmultitechnology.com/">Mikrotik Academy</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="/profile">Profile</a></li>
           <!-- <li><a class="nav-link swal2-cancel"  href="struktur/bot/bot.html">Layanan </a></li> -->
           <li><a class="getstarted scrollto" href="daftar-seko/daftar.html">Daftar</a></li>
         </ul>

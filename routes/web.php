@@ -41,3 +41,6 @@ Route::prefix('news')->group(function () {
 require __DIR__.'/auth.php';
 
 
+Route::get('/profile', function () {
+    return view('profile');
+});
