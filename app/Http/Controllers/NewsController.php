@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\Models\News;
@@ -8,53 +9,41 @@ use App\Models\Category;
 
 class NewsController extends Controller
 {
-    // Menampilkan daftar berita
-    public function index()
-    {
-        $news = News::orderBy('created_at', 'desc')->paginate(10);
-        return view('news.index', compact('news'));
-    }
-
-    // Menampilkan form untuk membuat berita baru
-    public function create()
-    {
-        return view('news.create');
+    // Menampilkan daftar berita dengan pencarian dan filter
     public function index(Request $request)
-{
-    $query = News::query();
+    {
+        $query = News::query();
 
-    // Pencarian berdasarkan title atau content
-    if ($request->has('search') && $request->search) {
-        $query->where(function($query) use ($request) {
-            $query->where('title', 'like', "%{$request->search}%")
-                  ->orWhere('content', 'like', "%{$request->search}%");
-        });
+        // Pencarian berdasarkan title atau content
+        if ($request->has('search') && $request->search) {
+            $query->where(function($query) use ($request) {
+                $query->where('title', 'like', "%{$request->search}%")
+                      ->orWhere('content', 'like', "%{$request->search}%");
+            });
+        }
+
+        // Filter berdasarkan category_id
+        if ($request->has('category_id') && $request->category_id) {
+            $query->where('category_id', $request->category_id);
+        }
+
+        // Filter berdasarkan start_date
+        if ($request->has('start_date') && $request->start_date) {
+            $query->whereDate('created_at', '>=', $request->start_date);
+        }
+
+        // Filter berdasarkan end_date
+        if ($request->has('end_date') && $request->end_date) {
+            $query->whereDate('created_at', '<=', $request->end_date);
+        }
+
+        $news = $query->orderBy('created_at', 'desc')->paginate(10)->appends($request->only(['search', 'category_id', 'start_date', 'end_date']));
+
+        // Mengambil daftar kategori untuk filter
+        $categories = Category::all();
+
+        return view('news.index', compact('news', 'categories'));
     }
-
-    // Filter berdasarkan category_id
-    if ($request->has('category_id') && $request->category_id) {
-        $query->where('category_id', $request->category_id);
-    }
-
-    // Filter berdasarkan start_date
-    if ($request->has('start_date') && $request->start_date) {
-        $query->whereDate('created_at', '>=', $request->start_date);
-    }
-
-    // Filter berdasarkan end_date
-    if ($request->has('end_date') && $request->end_date) {
-        $query->whereDate('created_at', '<=', $request->end_date);
-    }
-
-    $news = $query->orderBy('created_at', 'desc')->paginate(10)->appends($request->only(['search', 'category_id', 'start_date', 'end_date']));
-
-    // Mengambil daftar kategori untuk filter
-    $categories = Category::all();
-
-    return view('news.index', compact('news', 'categories'));
-}
-
-    
 
     // Menampilkan form untuk membuat berita baru
     public function create()
