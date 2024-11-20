@@ -19,6 +19,48 @@ class NewsController extends Controller
     public function create()
     {
         return view('news.create');
+    public function index(Request $request)
+{
+    $query = News::query();
+
+    // Pencarian berdasarkan title atau content
+    if ($request->has('search') && $request->search) {
+        $query->where(function($query) use ($request) {
+            $query->where('title', 'like', "%{$request->search}%")
+                  ->orWhere('content', 'like', "%{$request->search}%");
+        });
+    }
+
+    // Filter berdasarkan category_id
+    if ($request->has('category_id') && $request->category_id) {
+        $query->where('category_id', $request->category_id);
+    }
+
+    // Filter berdasarkan start_date
+    if ($request->has('start_date') && $request->start_date) {
+        $query->whereDate('created_at', '>=', $request->start_date);
+    }
+
+    // Filter berdasarkan end_date
+    if ($request->has('end_date') && $request->end_date) {
+        $query->whereDate('created_at', '<=', $request->end_date);
+    }
+
+    $news = $query->orderBy('created_at', 'desc')->paginate(10)->appends($request->only(['search', 'category_id', 'start_date', 'end_date']));
+
+    // Mengambil daftar kategori untuk filter
+    $categories = Category::all();
+
+    return view('news.index', compact('news', 'categories'));
+}
+
+    
+
+    // Menampilkan form untuk membuat berita baru
+    public function create()
+    {
+        $categories = Category::all(); // Ambil semua kategori
+        return view('news.create', compact('categories'));
     }
 
     // Menyimpan berita baru ke database
@@ -28,7 +70,7 @@ class NewsController extends Controller
         $request->validate([
             'title' => 'required|max:255',
             'content' => 'required|min:10',
-            'category_id' => 'required|integer|exists:categories,id', // Menambahkan validasi kategori yang valid
+            'category_id' => 'required|exists:categories,id',  // Pastikan kategori valid
             'image' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
             'start_date' => 'required|date|after_or_equal:today',
             'end_date' => 'required|date|after:start_date|before_or_equal:'.now()->addDays(30)->format('Y-m-d'),
@@ -38,8 +80,8 @@ class NewsController extends Controller
             'content.required' => 'Konten berita wajib diisi.',
             'content.min' => 'Konten berita minimal 10 karakter.',
             'category_id.required' => 'Kategori berita wajib diisi.',
+            'category_id.exists' => 'Kategori yang dipilih tidak valid.',
             'category_id.integer' => 'Kategori harus berupa angka yang valid.',
-            'category_id.exists' => 'Kategori yang dipilih tidak ada.',
             'image.image' => 'File harus berupa gambar.',
             'image.mimes' => 'Gambar harus berformat jpg, jpeg, atau png.',
             'image.max' => 'Ukuran gambar maksimal 2MB.',
@@ -68,7 +110,8 @@ class NewsController extends Controller
     public function edit($id)
     {
         $news = News::findOrFail($id);
-        return view('news.edit', compact('news'));
+        $categories = Category::all(); // Ambil semua kategori
+        return view('news.edit', compact('news', 'categories'));
     }
 
     // Mengupdate data berita
@@ -78,7 +121,7 @@ class NewsController extends Controller
         $request->validate([
             'title' => 'required|max:255',
             'content' => 'required|min:10',
-            'category_id' => 'required|integer|exists:categories,id', // Menambahkan validasi kategori yang valid
+            'category_id' => 'required|exists:categories,id', 
             'image' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
             'start_date' => 'required|date|after_or_equal:today',
             'end_date' => 'required|date|after:start_date|before_or_equal:'.now()->addDays(30)->format('Y-m-d'),
@@ -88,8 +131,8 @@ class NewsController extends Controller
             'content.required' => 'Konten berita wajib diisi.',
             'content.min' => 'Konten berita minimal 10 karakter.',
             'category_id.required' => 'Kategori berita wajib diisi.',
+            'category_id.exists' => 'Kategori yang dipilih tidak valid.',
             'category_id.integer' => 'Kategori harus berupa angka yang valid.',
-            'category_id.exists' => 'Kategori yang dipilih tidak ada.',
             'image.image' => 'File harus berupa gambar.',
             'image.mimes' => 'Gambar harus berformat jpg, jpeg, atau png.',
             'image.max' => 'Ukuran gambar maksimal 2MB.',
