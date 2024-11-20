@@ -21,6 +21,7 @@
     <!-- endinject -->
     <link rel="shortcut icon" href="{{ asset('assets-admin/images/favicon.png') }}" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
 
     <!-- Custom CSS for Sidebar -->
     <style>
@@ -70,6 +71,9 @@
     <!-- Custom js for this page-->
     <script src="{{ asset('assets-admin/js/dashboard.js') }}"></script>
     <script src="{{ asset('assets-admin/js/Chart.roundedBarCharts.js') }}"></script>
+    <!-- Pastikan Anda memuat Bootstrap JS di bawah ini -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
     <!-- End custom js for this page-->
 
 </body>
