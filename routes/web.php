@@ -1,13 +1,11 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\NewsController;
+use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\AdminMiddleware;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\CommentarController;
-use App\Http\Controllers\AnnouncementController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -29,10 +27,6 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     });
     // Route lainnya untuk admin bisa ditambahkan di sini
     Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
-    Route::resource('announcements', AnnouncementController::class);
-    Route::resource('categories', CategoryController::class);
-    Route::resource('comments', CommentarController::class);
-    Route::post('/commentars/{news_id}', [CommentarController::class, 'store'])->middleware('auth');
 });
 
 
@@ -47,6 +41,10 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 
-Route::get('/profile', function () {
+Route::get('/profile-school', function () {
     return view('profile');
+});
+
+Route::get('/news', function () {
+    return view('news');
 });
