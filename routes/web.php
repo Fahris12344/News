@@ -1,13 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\NewsController;
-use App\Http\Middleware\AdminMiddleware;
+
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\CommentarController;
-use App\Http\Controllers\AnnouncementController;
+
 use App\Http\Controllers\DashboardController;
 
 Route::get('/', function () {
@@ -17,11 +14,20 @@ Route::get('/', function () {
 
 Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::get('/dashboard', [AdminController::class, 'index'])->name('pages.admin.dashboard');
-    // Route manual untuk kategori berita
-    Route::resource('/admin/category', CategoryController::class);
-    Route::resource('/admin/news', NewsController::class);
-    Route::resource('/admin/announcement', AnnouncementController::class);
-    Route::resource('/admin/commentar', CommentarController::class);
+    Route::get('/category', [AdminController::class, 'category'])->name('pages.admin.category.index');
+    Route::get('/category/create', [AdminController::class, 'createCategory'])->name('pages.admin.category.create');
+    Route::post('/category', [AdminController::class, 'storeCategory'])->name('pages.admin.category.store');
+    Route::get('/category/{id}/edit', [AdminController::class, 'editCategory'])->name('pages.admin.category.edit');
+    Route::put('/category/{id}', [AdminController::class, 'updateCategory'])->name('pages.admin.category.update');
+    Route::delete('/category/{id}', [AdminController::class, 'destroyCategory'])->name('pages.admin.category.destroy');
+
+    Route::get('/news', [AdminController::class, 'news'])->name('pages.admin.news.index');
+    Route::get('/news/create', [AdminController::class, 'createNews'])->name('pages.admin.news.create');
+    Route::post('/news', [AdminController::class, 'storeNews'])->name('pages.admin.news.store');
+    Route::get('/news/{id}/edit', [AdminController::class, 'editNews'])->name('pages.admin.news.edit');
+    Route::put('/news/{id}', [AdminController::class, 'updateNews'])->name('pages.admin.news.update');
+    Route::delete('/news/{id}', [AdminController::class, 'destroyNews'])->name('pages.admin.news.destroy');
+
 });
 
 

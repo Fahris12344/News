@@ -9,22 +9,6 @@
                         <!-- <img src="assets/img/logo.png" alt="Logo"> -->
                     </a>
                     <p class="mb-4"> lembaga pendidikan kejuruan yang berkomitmen mencetak generasi unggul, berakhlak mulia, dan siap bersaing di dunia kerja melalui pembelajaran berbasis kompetensi dan teknologi terkini."</p>
-                    <div class="d-flex">
-                        <a href="#" class="bg-primary d-flex rounded align-items-center py-2 px-3 me-2">
-                            <i class="fas fa-apple-alt text-white"></i>
-                            <div class="ms-3">
-                                <small class="text-white">Download on the</small>
-                                <h6 class="text-white">App Store</h6>
-                            </div>
-                        </a>
-                        <a href="#" class="bg-dark d-flex rounded align-items-center py-2 px-3 ms-2">
-                            <i class="fas fa-play text-primary"></i>
-                            <div class="ms-3">
-                                <small class="text-white">Get it on</small>
-                                <h6 class="text-white">Google Play</h6>
-                            </div>
-                        </a>
-                    </div>
                 </div>
             </div>
             <div class="col-md-6 col-lg-6 col-xl-2">

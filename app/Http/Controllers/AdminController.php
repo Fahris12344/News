@@ -2,77 +2,161 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\News;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
-
-    public function setAdmin(User $user)
-    {
-        // Mengubah role pengguna menjadi 'admin'
-    }
     /**
-     * Display a listing of the resource.
+     * Tampilkan dashboard admin.
      */
     public function index()
     {
-        // Mengecek apakah pengguna yang login adalah admin
+        // Pastikan pengguna adalah admin
         if (Auth::check() && Auth::user()->role !== 'admin') {
-            // Jika bukan admin, redirect ke halaman home
-            return redirect('/'); // Atau ke route lain yang Anda inginkan
+            return redirect('/')->with('error', 'Anda tidak memiliki akses.');
         }
 
-        // Menampilkan dashboard admin jika pengguna adalah admin
         return view('pages.admin.dashboard');
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Kelola kategori - Tampilkan semua kategori.
      */
-    public function create()
+    public function category()
     {
-        //
+        $categories = Category::all();
+        return view('pages.admin.category.index', compact('categories'));
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Form untuk menambahkan kategori baru.
      */
-    public function store(Request $request)
+    public function createCategory()
     {
-        //
+        return view('pages.admin.category.create');
     }
 
     /**
-     * Display the specified resource.
+     * Simpan kategori baru ke database.
      */
-    public function show(string $id)
+    public function storeCategory(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:255',
+        ]);
+
+        Category::create($request->all());
+        return redirect()->route('pages.admin.category.index')->with('success', 'Kategori berhasil ditambahkan.');
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Form untuk mengedit kategori.
      */
-    public function edit(string $id)
+    public function editCategory($id)
     {
-        //
+        $category = Category::findOrFail($id);
+        return view('pages.admin.category.edit', compact('category'));
     }
 
     /**
-     * Update the specified resource in storage.
+     * Perbarui kategori di database.
      */
-    public function update(Request $request, string $id)
+    public function updateCategory(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:255',
+        ]);
+
+        $category = Category::findOrFail($id);
+        $category->update($request->all());
+        return redirect()->route('pages.admin.category.index')->with('success', 'Kategori berhasil diperbarui.');
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Hapus kategori dari database.
      */
-    public function destroy(string $id)
+    public function destroyCategory($id)
     {
-        //
+        $category = Category::findOrFail($id);
+        $category->delete();
+        return redirect()->route('pages.admin.category.index')->with('success', 'Kategori berhasil dihapus.');
+    }
+
+    /**
+     * Kelola berita - Tampilkan semua berita.
+     */
+    public function news()
+    {
+        $news = News::all();
+        return view('pages.admin.news.index', compact('news'));
+    }
+
+    /**
+     * Form untuk menambahkan berita baru.
+     */
+    public function createNews()
+    {
+        return view('pages.admin.news.create');
+    }
+
+    /**
+     * Simpan berita baru ke database.
+     */
+    public function storeNews(Request $request)
+    {
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'content' => 'required',
+        ]);
+
+        News::create($request->all());
+        return redirect()->route('pages.admin.news.index')->with('success', 'Berita berhasil ditambahkan.');
+    }
+
+    /**
+     * Form untuk mengedit berita.
+     */
+    public function editNews($id)
+    {
+        $news = News::findOrFail($id);
+        return view('pages.admin.news.edit', compact('news'));
+    }
+
+    /**
+     * Perbarui berita di database.
+     */
+    public function updateNews(Request $request, $id)
+    {
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'content' => 'required',
+        ]);
+
+        $news = News::findOrFail($id);
+        $news->update($request->all());
+        return redirect()->route('pages.admin.news.index')->with('success', 'Berita berhasil diperbarui.');
+    }
+
+    /**
+     * Hapus berita dari database.
+     */
+    public function destroyNews($id)
+    {
+        $news = News::findOrFail($id);
+        $news->delete();
+        return redirect()->route('pages.admin.news.index')->with('success', 'Berita berhasil dihapus.');
+    }
+
+    /**
+     * Set pengguna menjadi admin.
+     */
+    public function setAdmin(User $user)
+    {
+        $user->update(['role' => 'admin']);
+        return redirect()->back()->with('success', 'Role pengguna berhasil diubah menjadi admin.');
     }
 }
