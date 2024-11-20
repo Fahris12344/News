@@ -41,10 +41,10 @@
                           </a>
                           <ul class="dropdown-menu dropdown-menu-end">
                               @if (Auth::user()->role == 'admin')
-                                  <li><a href="{{ route('admin.dashboard') }}" class="dropdown-item"><i
+                                  <li><a href="{{ route('pages.admin.dashboard') }}" class="dropdown-item"><i
                                               class="fa fa-tachometer-alt me-2"></i> Admin Dashboard</a></li>
                               @elseif (Auth::user()->role == 'user')
-                                  <li><a href="{{ route('user.dashboard') }}" class="dropdown-item"><i
+                                  <li><a href="#" class="dropdown-item"><i
                                               class="fa fa-user me-2"></i> User Dashboard</a></li>
                               @endif
                               <li>
@@ -59,7 +59,7 @@
                       </div>
                   @else
                       <!-- Tombol Get Started jika belum login -->
-                      <a href="{{ route('register') }}"
+                      <a href="{{ route('login') }}"
                           class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">Bergabung Segera</a>
                   @endif
               </div>
