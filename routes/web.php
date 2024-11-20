@@ -3,19 +3,18 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Middleware\AdminMiddleware;
+use App\Http\Controllers\AdminController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
+Route::middleware(['auth'])->get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
+// routes/web.php
 
-use App\Http\Middleware\IsAdmin;
+Route::middleware(['auth', 'is_admin'])->get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
 
-Route::middleware(['auth', IsAdmin::class])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('admin.dashboard'); // Halaman khusus admin
-    })->name('admin.dashboard');
-});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
