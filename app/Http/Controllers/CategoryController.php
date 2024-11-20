@@ -34,11 +34,7 @@ class CategoryController extends Controller
     }
 
     // Tampilkan detail kategori (opsional)
-    public function show($id)
-    {
-        $category = Category::findOrFail($id);
-        return view('categories.show', compact('category'));
-    }
+  
 
     // Tampilkan form untuk mengedit kategori
     public function edit($id)

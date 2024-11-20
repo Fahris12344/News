@@ -95,6 +95,12 @@ class NewsController extends Controller
         return redirect()->route('news.index')->with('success', 'Berita berhasil ditambahkan!');
     }
 
+    public function show ($id){
+        $news = News::findOrFail($id);
+        $categories = Category::all(); // Ambil semua kategori
+        return view('news.show', compact('news','categories'));
+    }
+
     // Menampilkan form untuk mengedit berita
     public function edit($id)
     {

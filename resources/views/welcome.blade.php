@@ -101,32 +101,15 @@
         <div class="trending-area fix">
             <div class="container">
                 <div class="trending-main">
-                    <!-- Trending Tittle -->
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="trending-tittle">
-                                <strong>Trending now</strong>
-                                <!-- <p>Rem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
-                                <div class="trending-animated">
-                                    <ul id="js-news" class="js-hidden">
-                                        <li class="news-item">Bangladesh dolor sit amet, consectetur adipisicing elit.</li>
-                                        <li class="news-item">Spondon IT sit amet, consectetur.......</li>
-                                        <li class="news-item">Rem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-                                    </ul>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
                     <div class="row">
                         <div class="col-lg-8">
                             <!-- Trending Top -->
                             <div class="trending-top mb-30">
                                 <div class="trend-top-img">
-                                    <img src="assets/img/trending/trending_top.jpg" alt="">
+                                    <img src="assets/img/trending/sekolah_top.jpg" alt="">
                                     <div class="trend-top-cap">
-                                        <span>Appetizers</span>
-                                        <h2><a href="details.html">Welcome To The Best Model Winner<br> Contest At Look of the year</a></h2>
+                                        <span>Pendidikan</span>
+                                        <h2><a href="details.html">Acara Peringatan Hari Guru Nasional di SMP Negeri 1 Jakarta</a></h2>
                                     </div>
                                 </div>
                             </div>
@@ -134,250 +117,128 @@
                             <div class="trending-bottom">
                                 <div class="row">
                                     <div class="col-lg-4">
-                                    <div class="single-bottom mb-35">
-                                        <div class="trend-bottom-img mb-30">
-                                            <img src="assets/img/trending/trending_bottom1.jpg" alt="">
-                                        </div>
-                                        <div class="trend-bottom-cap">
-                                            <span class="color1">Lifestyple</span>
-                                            <h4><a href="details.html">Get the Illusion of Fuller Lashes by “Mascng.”</a></h4>
-                                        </div>
-                                    </div>
-                                    </div>
-                                    <div class="col-lg-4">
                                         <div class="single-bottom mb-35">
                                             <div class="trend-bottom-img mb-30">
-                                                <img src="assets/img/trending/trending_bottom2.jpg" alt="">
+                                                <img src="assets/img/trending/sekolah1.jpg" alt="">
                                             </div>
                                             <div class="trend-bottom-cap">
-                                                <span class="color2">Sports</span>
-                                                <h4><h4><a href="details.html">Get the Illusion of Fuller Lashes by “Mascng.”</a></h4></h4>
+                                                <span class="color1">Ekstrakurikuler</span>
+                                                <h4><a href="details.html">Siswa SMA Berprestasi di Olimpiade Sains Nasional</a></h4>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="single-bottom mb-35">
                                             <div class="trend-bottom-img mb-30">
-                                                <img src="assets/img/trending/trending_bottom3.jpg" alt="">
+                                                <img src="assets/img/trending/sekolah2.jpg" alt="">
                                             </div>
                                             <div class="trend-bottom-cap">
-                                                <span class="color3">Travels</span>
-                                                <h4><a href="details.html"> Welcome To The Best Model Winner Contest</a></h4>
+                                                <span class="color2">Event</span>
+                                                <h4><a href="details.html">Lomba Cerdas Cermat Antar SMP di Kota Surabaya</a></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="single-bottom mb-35">
+                                            <div class="trend-bottom-img mb-30">
+                                                <img src="assets/img/trending/sekolah3.jpg" alt="">
+                                            </div>
+                                            <div class="trend-bottom-cap">
+                                                <span class="color3">Prestasi</span>
+                                                <h4><a href="details.html">Peluncuran Program Literasi Nasional di Sekolah</a></h4>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- Riht content -->
+                        <!-- Right Content -->
                         <div class="col-lg-4">
                             <div class="trand-right-single d-flex">
                                 <div class="trand-right-img">
-                                    <img src="assets/img/trending/right1.jpg" alt="">
+                                    <img src="assets/img/trending/right_sekolah1.jpg" alt="">
                                 </div>
                                 <div class="trand-right-cap">
-                                    <span class="color1">Concert</span>
-                                    <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
+                                    <span class="color1">Kegiatan</span>
+                                    <h4><a href="details.html">Festival Kebudayaan di SMAN 5 Bandung</a></h4>
                                 </div>
                             </div>
                             <div class="trand-right-single d-flex">
                                 <div class="trand-right-img">
-                                    <img src="assets/img/trending/right2.jpg" alt="">
+                                    <img src="assets/img/trending/right_sekolah2.jpg" alt="">
                                 </div>
                                 <div class="trand-right-cap">
-                                    <span class="color3">sea beach</span>
-                                    <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
-                                </div>
-                            </div>
-                            <div class="trand-right-single d-flex">
-                                <div class="trand-right-img">
-                                    <img src="assets/img/trending/right3.jpg" alt="">
-                                </div>
-                                <div class="trand-right-cap">
-                                    <span class="color2">Bike Show</span>
-                                    <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
-                                </div>
-                            </div> 
-                            <div class="trand-right-single d-flex">
-                                <div class="trand-right-img">
-                                    <img src="assets/img/trending/right4.jpg" alt="">
-                                </div>
-                                <div class="trand-right-cap">
-                                    <span class="color4">See beach</span>
-                                    <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
-                                </div>
-                            </div>
-                            <div class="trand-right-single d-flex">
-                                <div class="trand-right-img">
-                                    <img src="assets/img/trending/right5.jpg" alt="">
-                                </div>
-                                <div class="trand-right-cap">
-                                    <span class="color1">Skeping</span>
-                                    <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
+                                    <span class="color3">Event</span>
+                                    <h4><a href="details.html">Pelatihan Dasar Kedisiplinan untuk Siswa Baru</a></h4>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Trending Area End -->
-        <!--   Weekly-News start -->
-        <div class="weekly-news-area pt-50">
-            <div class="container">
-               <div class="weekly-wrapper">
-                    <!-- section Tittle -->
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="section-tittle mb-30">
-                                <h3>Weekly Top News</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="weekly-news-active dot-style d-flex dot-style">
-                                <div class="weekly-single">
-                                    <div class="weekly-img">
-                                        <img src="assets/img/news/weeklyNews2.jpg" alt="">
-                                    </div>
-                                    <div class="weekly-caption">
-                                        <span class="color1">Strike</span>
-                                        <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                    </div>
-                                </div> 
-                                <div class="weekly-single active">
-                                    <div class="weekly-img">
-                                            <img src="assets/img/news/weeklyNews1.jpg" alt="">
-                                    </div>
-                                    <div class="weekly-caption">
-                                        <span class="color1">Strike</span>
-                                        <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                    </div>
-                                </div>
-                                <div class="weekly-single">
-                                    <div class="weekly-img">
-                                            <img src="assets/img/news/weeklyNews3.jpg" alt="">
-                                    </div>
-                                    <div class="weekly-caption">
-                                        <span class="color1">Strike</span>
-                                        <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                    </div>
-                                </div>
-                                <div class="weekly-single">
-                                    <div class="weekly-img">
-                                        <img src="assets/img/news/weeklyNews1.jpg" alt="">
-                                    </div>
-                                    <div class="weekly-caption">
-                                        <span class="color1">Strike</span>
-                                        <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-               </div>
-            </div>
-        </div>           
-        <div class="weekly2-news-area  weekly2-pading gray-bg">
-            <div class="container">
-                <div class="weekly2-wrapper">
-                    <!-- section Tittle -->
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="section-tittle mb-30">
-                                <h3>Weekly Top News</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="weekly2-news-active dot-style d-flex dot-style">
-                                <div class="weekly2-single">
-                                    <div class="weekly2-img">
-                                        <img src="assets/img/news/weekly2News1.jpg" alt="">
-                                    </div>
-                                    <div class="weekly2-caption">
-                                        <span class="color1">Corporate</span>
-                                        <p>25 Jan 2020</p>
-                                        <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                    </div>
-                                </div> 
-                                <div class="weekly2-single">
-                                    <div class="weekly2-img">
-                                        <img src="assets/img/news/weekly2News2.jpg" alt="">
-                                    </div>
-                                    <div class="weekly2-caption">
-                                        <span class="color1">Event night</span>
-                                        <p>25 Jan 2020</p>
-                                        <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                    </div>
-                                </div> 
-                                <div class="weekly2-single">
-                                    <div class="weekly2-img">
-                                        <img src="assets/img/news/weekly2News3.jpg" alt="">
-                                    </div>
-                                    <div class="weekly2-caption">
-                                        <span class="color1">Corporate</span>
-                                        <p>25 Jan 2020</p>
-                                        <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                    </div>
-                                </div>
-                                 <div class="weekly2-single">
-                                    <div class="weekly2-img">
-                                        <img src="assets/img/news/weekly2News4.jpg" alt="">
-                                    </div>
-                                    <div class="weekly2-caption">
-                                        <span class="color1">Event time</span>
-                                        <p>25 Jan 2020</p>
-                                        <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                    </div>
-                                </div> 
-                                 <div class="weekly2-single">
-                                    <div class="weekly2-img">
-                                        <img src="assets/img/news/weekly2News4.jpg" alt="">
-                                    </div>
-                                    <div class="weekly2-caption">
-                                        <span class="color1">Corporate</span>
-                                        <p>25 Jan 2020</p>
-                                        <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                    </div>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>           
+        </div>                
         <!-- End Weekly-News -->
         <!-- Start Youtube -->
-        <div class="youtube-area video-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="video-items-active">
-                            <div class="video-items text-center">
-                                <iframe src="https://www.youtube.com/embed/CicQIuG8hBo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                            <div class="video-items text-center">
-                                <iframe  src="https://www.youtube.com/embed/rIz00N40bag" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                            <div class="video-items text-center">
-                                <iframe src="https://www.youtube.com/embed/CONfhrASy44" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    
-                            </div>
-                            <div class="video-items text-center">
-                                <iframe src="https://www.youtube.com/embed/lq6fL2ROWf8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                             
-                            </div>
-                            <div class="video-items text-center">
-                                <iframe src="https://www.youtube.com/embed/0VxlQlacWV4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                        </div>
+        <div class="container my-5">
+            <h2 class="text-center mb-4 text-muted">Berita Sekolah</h2>
+            <div class="row g-4">
+                <!-- Video 1 -->
+                <div class="col-md-4">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/spea_vzcv-4?si=IPkI2eRi9ugfJ6Gd" 
+                                title="Berita SMK Al Azhar 1" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen>
+                        </iframe>
                     </div>
+                    <p class="mt-2 text-center">Berita SMK Al Azhar 1</p>
+                </div>
+                <!-- Video 2 -->
+                <div class="col-md-4">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/BTObLptWrpY?si=fFnzCqFxu_MGObdz" 
+                                title="Berita SMK Al Azhar 2" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <p class="mt-2 text-center">Berita SMK Al Azhar 2</p>
+                </div>
+                <!-- Video 3 -->
+                <div class="col-md-4">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/CONfhrASy44" 
+                                title="Berita SMK Al Azhar 3" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <p class="mt-2 text-center">Berita SMK Al Azhar 3</p>
+                </div>
+                <!-- Video 4 -->
+                <div class="col-md-4">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/mF_1XfjpIc4?si=RU1huAqzuh2mC12S" 
+                                title="Berita SMK Al Azhar 4" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <p class="mt-2 text-center">Berita SMK Al Azhar 4</p>
+                </div>
+                <!-- Video 5 -->
+                <div class="col-md-4">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/mF_1XfjpIc4?si=RU1huAqzuh2mC12S" 
+                                title="Berita SMK Al Azhar 5" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <p class="mt-2 text-center">Berita SMK Al Azhar 5</p>
                 </div>
             </div>
-        </div> 
+        </div>        
         <!-- End pagination  -->
         </main>
 </body>

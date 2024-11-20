@@ -14,11 +14,7 @@ class CommentarController extends Controller
     //     $this->middleware('auth');
     // }
 
-    public function index()
-    {
-        $commentars = Commentar::with('user', 'news')->latest()->paginate(10); 
-        return view('commentars.index', compact('commentars'));
-    }
+   
 
     // Tampilkan form untuk menambahkan komentar
     public function create($news_id)
@@ -26,37 +22,37 @@ class CommentarController extends Controller
         $news = News::findOrFail($news_id);
         return view('commentars.create', compact('news'));
     }
+        /**
+         * Menyimpan komentar ke database
+         */
+        public function store(Request $request)
+        {
+            // Validasi input
+            $request->validate([
+                'news_id' => 'required|exists:news,id', // Pastikan berita ada
+                'author_name' => 'required|string|max:255', // Nama pengirim wajib
+                'content' => 'required|string|min:3', // Komentar minimal 3 karakter
+            ], [
+                'news_id.required' => 'Berita tidak ditemukan.',
+                'news_id.exists' => 'Berita yang dipilih tidak valid.',
+                'author_name.required' => 'Nama pengirim wajib diisi.',
+                'author_name.max' => 'Nama pengirim maksimal 255 karakter.',
+                'content.required' => 'Komentar wajib diisi.',
+                'content.min' => 'Komentar minimal 3 karakter.',
+            ]);
+    
+            // Simpan komentar
+            Comment::create([
+                'news_id' => $request->news_id,
+                'author_name' => $request->author_name,
+                'content' => $request->content,
+            ]);
+    
+            // Redirect kembali ke halaman berita dengan pesan sukses
+            return redirect()->back()->with('success', 'Komentar berhasil ditambahkan!');
+        }
+    
 
-    // Simpan komentar baru
-    public function store(Request $request, $news_id)
-    {
-        $request->validate([
-            'content' => 'required|string|max:1000',
-        ]);
-
-        // Menyimpan komentar terkait dengan user dan news
-        Commentar::create([
-            'content' => $request->content,
-            'user_id' => auth()->id(), // Menggunakan ID pengguna yang login
-            'news_id' => $news_id,
-        ]);
-
-        return redirect()->route('news.show', $news_id)->with('success', 'Komentar berhasil ditambahkan.');
-    }
-
-    // Tampilkan detail komentar (opsional)
-    public function show($id)
-    {
-        $commentar = Commentar::findOrFail($id);
-        return view('commentars.show', compact('commentar'));
-    }
-
-    // Tampilkan form untuk mengedit komentar
-    public function edit($id)
-    {
-        $commentar = Commentar::findOrFail($id);
-        return view('commentars.edit', compact('commentar'));
-    }
 
     // Update komentar
     public function update(Request $request, $id)

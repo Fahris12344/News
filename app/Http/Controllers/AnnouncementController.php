@@ -27,23 +27,35 @@ class AnnouncementController extends Controller
             'title' => 'required|string|max:255',
             'description' => 'required',
             'image' => 'nullable|image|mimes:jpg,png,jpeg|max:2048',
-            'date' => 'required|date',
+            'date' => 'required|date|after_or_equal:today', // Validasi untuk tidak bisa sebelum hari ini
+        ], [
+            'title.required' => 'Judul pengumuman wajib diisi.',
+            'title.string' => 'Judul pengumuman harus berupa teks.',
+            'title.max' => 'Judul pengumuman maksimal 255 karakter.',
+            'description.required' => 'Deskripsi pengumuman wajib diisi.',
+            'image.image' => 'File gambar harus berupa gambar.',
+            'image.mimes' => 'Format gambar yang diperbolehkan hanya jpg, jpeg, atau png.',
+            'image.max' => 'Ukuran gambar maksimal 2MB.',
+            'date.required' => 'Tanggal pengumuman wajib diisi.',
+            'date.date' => 'Tanggal pengumuman harus berupa tanggal yang valid.',
+            'date.after_or_equal' => 'Tanggal pengumuman harus hari ini atau setelahnya, tidak bisa memilih tanggal sebelumnya.',
         ]);
-
+    
         $imagePath = null;
         if ($request->hasFile('image')) {
             $imagePath = $request->file('image')->store('announcements', 'public');
         }
-
+    
         Announcement::create([
             'title' => $request->title,
             'description' => $request->description,
             'image' => $imagePath,
             'date' => $request->date,
         ]);
-
+    
         return redirect()->route('announcements.index')->with('success', 'Pengumuman berhasil ditambahkan.');
     }
+    
 
     // Tampilkan detail pengumuman
     public function show($id)
@@ -66,11 +78,22 @@ class AnnouncementController extends Controller
             'title' => 'required|string|max:255',
             'description' => 'required',
             'image' => 'nullable|image|mimes:jpg,png,jpeg|max:2048',
-            'date' => 'required|date',
+            'date' => 'required|date|after_or_equal:today', // Validasi untuk tidak bisa sebelum hari ini
+        ], [
+            'title.required' => 'Judul pengumuman wajib diisi.',
+            'title.string' => 'Judul pengumuman harus berupa teks.',
+            'title.max' => 'Judul pengumuman maksimal 255 karakter.',
+            'description.required' => 'Deskripsi pengumuman wajib diisi.',
+            'image.image' => 'File gambar harus berupa gambar.',
+            'image.mimes' => 'Format gambar yang diperbolehkan hanya jpg, jpeg, atau png.',
+            'image.max' => 'Ukuran gambar maksimal 2MB.',
+            'date.required' => 'Tanggal pengumuman wajib diisi.',
+            'date.date' => 'Tanggal pengumuman harus berupa tanggal yang valid.',
+            'date.after_or_equal' => 'Tanggal pengumuman harus hari ini atau setelahnya, tidak bisa memilih tanggal sebelumnya.',
         ]);
-
+    
         $announcement = Announcement::findOrFail($id);
-
+    
         $imagePath = $announcement->image;
         if ($request->hasFile('image')) {
             if ($imagePath) {
@@ -78,16 +101,17 @@ class AnnouncementController extends Controller
             }
             $imagePath = $request->file('image')->store('announcements', 'public');
         }
-
+    
         $announcement->update([
             'title' => $request->title,
             'description' => $request->description,
             'image' => $imagePath,
             'date' => $request->date,
         ]);
-
+    
         return redirect()->route('announcements.index')->with('success', 'Pengumuman berhasil diperbarui.');
     }
+    
 
     // Hapus pengumuman
     public function destroy($id)
