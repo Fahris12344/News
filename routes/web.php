@@ -31,4 +31,10 @@ Route::middleware('auth')->group(function () {
     Route::post('/berita/{id}/komentar', [UserKomentarController::class, 'store'])->name('komentar.store');
 });
 
+<<<<<<< HEAD
+require __DIR__.'/auth.php';
+
+//wee
+=======
 require __DIR__ . '/auth.php';
+>>>>>>> 9b1f6bd183844ec0081fe3b268cb250473d6e454
