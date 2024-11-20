@@ -75,18 +75,16 @@
        <!-- Navbar & Hero End -->
 
 
- <!-- About Start -->
+       <!-- Tentang Kami Mulai -->
 <div class="container-fluid about py-5">
   <div class="container py-5">
       <div class="row g-5 align-items-center">
           <div class="col-xl-7 wow fadeInLeft" data-wow-delay="0.2s">
               <div>
                   <h4 class="text-primary">Tentang Kami</h4>
-                  <h1 class="display-5 mb-4">Kenali SMK Al Azhar dan Raih Masa Depan Gemilang</h1>
+                  <h1 class="display-5 mb-4">Kenali SMK Al Azhar, Wujudkan Masa Depan Gemilang</h1>
                   <p class="mb-4">
-                      SMK Al Azhar adalah lembaga pendidikan kejuruan yang berkomitmen untuk mencetak generasi unggul 
-                      dengan keterampilan praktis dan nilai-nilai islami. Kami menyediakan berbagai program keahlian 
-                      yang dirancang untuk mendukung kebutuhan industri masa kini.
+                      SMK Al Azhar merupakan lembaga pendidikan kejuruan yang berkomitmen untuk mencetak lulusan yang kompeten, berkarakter, dan siap bersaing di dunia kerja. Kami menawarkan pendidikan berkualitas yang berlandaskan nilai-nilai agama dan profesionalisme.
                   </p>
                   <div class="row g-4">
                       <div class="col-md-6 col-lg-6 col-xl-6">
@@ -94,7 +92,7 @@
                               <div><i class="fas fa-lightbulb fa-3x text-primary"></i></div>
                               <div class="ms-4">
                                   <h4>Konsultasi Karir</h4>
-                                  <p>Kami memberikan bimbingan untuk membantu siswa meraih impian karirnya.</p>
+                                  <p>Kami membimbing siswa untuk menentukan pilihan karir yang sesuai dengan minat dan bakat mereka.</p>
                               </div>
                           </div>
                       </div>
@@ -102,150 +100,111 @@
                           <div class="d-flex">
                               <div><i class="bi bi-bookmark-heart-fill fa-3x text-primary"></i></div>
                               <div class="ms-4">
-                                  <h4>Pengalaman Bertahun-Tahun</h4>
-                                  <p>SMK Al Azhar telah berdiri dan berpengalaman dalam mendidik generasi muda.</p>
+                                  <h4>Pengalaman Bertahun-tahun</h4>
+                                  <p>Dengan pengalaman lebih dari satu dekade, kami terus berinovasi dalam pendidikan kejuruan.</p>
                               </div>
                           </div>
                       </div>
                       <div class="col-sm-6">
-                          <a href="#" class="btn btn-primary rounded-pill py-3 px-5 flex-shrink-0">Jelajahi Sekarang</a>
+                          <a href="#" class="btn btn-primary rounded-pill py-3 px-5 flex-shrink-0">Pelajari Lebih Lanjut</a>
+                      </div>
+                      <div class="col-sm-6">
+                          <div class="d-flex">
+                              <i class="fas fa-phone-alt fa-2x text-primary me-4"></i>
+                              <div>
+                                  <h4>Hubungi Kami</h4>
+                                  <p class="mb-0 fs-5" style="letter-spacing: 1px;">+6281234567890</p>
+                              </div>
+                          </div>
                       </div>
                   </div>
               </div>
           </div>
           <div class="col-xl-5 wow fadeInRight" data-wow-delay="0.2s">
-              <div class=" rounded position-relative overflow-hidden">
-                  <img src="assets\img\tentang-image1.png" class="img-fluid rounded w-100" alt="Tentang SMK Al Azhar">
-                  <div class="rounded-bottom">
-                      <img src="assets/img/about-5.jpg" class="img-fluid rounded-bottom w-100" alt="Foto SMK Al Azhar">
-                  </div>
+              <div class="rounded position-relative overflow-hidden">
+                  <img src="assets/img/tentang-image1.png" class="img-fluid rounded w-100" alt="Gambar SMK Al Azhar">
               </div>
           </div>
       </div>
   </div>
 </div>
-<!-- About End -->
+<!-- Tentang Kami Selesai -->
 
 
-                           <div class="" style="position: absolute; top: -15px; right: -15px;">
-                               <img src="assets/img/about-3.png" class="img-fluid"
-                                   style="width: 150px; height: 150px; opacity: 0.7;" alt="">
-                           </div>
-                           <div class=""
-                               style="position: absolute; top: -20px; left: 10px; transform: rotate(90deg);">
-                               <img src="assets/img/about-4.png" class="img-fluid"
-                                   style="width: 100px; height: 150px; opacity: 0.9;" alt="">
-                           </div>
-                           <div class="rounded-bottom">
-                               <img src="assets/img/about-5.jpg" class="img-fluid rounded-bottom w-100" alt="">
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </div>
-       <!-- About End -->
+     <!-- Layanan Kami Mulai -->
+<div class="container-fluid service pb-5">
+  <div class="container pb-5">
+      <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+          <h4 class="text-primary">Layanan Kami</h4>
+          <h1 class="display-5 mb-4">Informasi Terbaik untuk Komunitas Sekolah</h1>
+          <p class="mb-0">
+              Selamat datang di web berita sekolah kami! Kami menyediakan informasi terkini tentang kegiatan, acara, dan pengumuman penting di lingkungan sekolah. Dengan desain modern dan navigasi yang mudah, kami berkomitmen memberikan berita terpercaya untuk siswa, guru, dan orang tua.
+          </p>
+      </div>
+      <div class="row g-4">
+          <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+              <div class="service-item rounded-bottom p-4 text-center border border-primary position-relative">
+                  <!-- Tempat Vektor -->
+                  <div class="vector-container mb-4">
+                      <img src="assets/img/layanan-1.png" alt="Vektor Berita Terkini" class="img-fluid" style="width: 100px;">
+                  </div>
+                  <h4 class="text-primary mb-3">Berita Terkini</h4>
+                  <p class="mb-3">
+                      Dapatkan berita terbaru tentang prestasi siswa, kegiatan sekolah, dan informasi penting lainnya langsung dari sumber terpercaya.
+                  </p>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+              <div class="service-item rounded-bottom p-4 text-center border border-primary position-relative">
+                  <!-- Tempat Vektor -->
+                  <div class="vector-container mb-4">
+                      <img src="assets/vektor2.svg" alt="Vektor Agenda Kegiatan" class="img-fluid" style="width: 80px;">
+                  </div>
+                  <h4 class="text-primary mb-3">Agenda Kegiatan</h4>
+                  <p class="mb-3">
+                      Pantau jadwal acara sekolah seperti lomba, seminar, dan hari penting lainnya agar tidak ketinggalan momen istimewa.
+                  </p>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+            <div class="service-item rounded-bottom p-4 text-center border border-primary position-relative">
+                <!-- Tempat Vektor -->
+                <div class="vector-container mb-4">
+                    <img src="assets/vektor2.svg" alt="Vektor Agenda Kegiatan" class="img-fluid" style="width: 80px;">
+                </div>
+                <h4 class="text-primary mb-3">Pengumuman</h4>
+                <p class="mb-3">
+                  Temukan pengumuman penting seperti pendaftaran, libur,<br> dan kebijakan baru sekolah.
+              </p>               
+            </div>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- Layanan Kami Selesai -->
 
-       <!-- Services Start -->
-       <div class="container-fluid service pb-5">
-           <div class="container pb-5">
-               <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                   <h4 class="text-primary">Our Services</h4>
-                   <h1 class="display-5 mb-4">We Services provided best offer</h1>
-                   <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur adipisci facilis
-                       cupiditate recusandae aperiam temporibus corporis itaque quis facere, numquam, ad culpa deserunt sint
-                       dolorem autem obcaecati, ipsam mollitia hic.
-                   </p>
-               </div>
-               <div class="row g-4">
-                   <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-                       <div class="service-item">
-                           <div class="service-img">
-                               <img src="assets/img/service-1.jpg" class="img-fluid rounded-top w-100" alt="Image">
-                           </div>
-                           <div class="rounded-bottom p-4">
-                               <a href="#" class="h4 d-inline-block mb-4"> Strategy Consulting</a>
-                               <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sint?
-                                   Excepturi facilis neque nesciunt similique officiis veritatis,
-                               </p>
-                               <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
-                       <div class="service-item">
-                           <div class="service-img">
-                               <img src="assets/img/service-2.jpg" class="img-fluid rounded-top w-100" alt="Image">
-                           </div>
-                           <div class="rounded-bottom p-4">
-                               <a href="#" class="h4 d-inline-block mb-4">Financial Advisory</a>
-                               <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sint?
-                                   Excepturi facilis neque nesciunt similique officiis veritatis,
-                               </p>
-                               <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
-                       <div class="service-item">
-                           <div class="service-img">
-                               <img src="assets/img/service-3.jpg" class="img-fluid rounded-top w-100" alt="Image">
-                           </div>
-                           <div class="rounded-bottom p-4">
-                               <a href="#" class="h4 d-inline-block mb-4">Managements</a>
-                               <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sint?
-                                   Excepturi facilis neque nesciunt similique officiis veritatis,
-                               </p>
-                               <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-                       <div class="service-item">
-                           <div class="service-img">
-                               <img src="assets/img/service-4.jpg" class="img-fluid rounded-top w-100" alt="Image">
-                           </div>
-                           <div class="rounded-bottom p-4">
-                               <a href="#" class="h4 d-inline-block mb-4">Supply Optimization</a>
-                               <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sint?
-                                   Excepturi facilis neque nesciunt similique officiis veritatis,
-                               </p>
-                               <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
-                       <div class="service-item">
-                           <div class="service-img">
-                               <img src="assets/img/service-5.jpg" class="img-fluid rounded-top w-100" alt="Image">
-                           </div>
-                           <div class="rounded-bottom p-4">
-                               <a href="#" class="h4 d-inline-block mb-4">Hr Consulting</a>
-                               <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sint?
-                                   Excepturi facilis neque nesciunt similique officiis veritatis,
-                               </p>
-                               <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
-                       <div class="service-item">
-                           <div class="service-img">
-                               <img src="assets/img/service-6.jpg" class="img-fluid rounded-top w-100" alt="Image">
-                           </div>
-                           <div class="rounded-bottom p-4">
-                               <a href="#" class="h4 d-inline-block mb-4">Marketing Consulting</a>
-                               <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sint?
-                                   Excepturi facilis neque nesciunt similique officiis veritatis,
-                               </p>
-                               <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </div>
-       <!-- Services End -->
+<!-- CSS Tambahan -->
+<style>
+  .service-item {
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.0) !important; /* Shadow default */
+  }
+
+  .service-item:hover {
+      background-color: #f8f9fa;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow tipis saat hover */
+  }
+
+  .vector-container img {
+      transition: transform 0.3s ease-in-out;
+  }
+
+  .vector-container img:hover {
+      transform: rotate(15deg);
+  }
+</style>
+
+
 
        <!-- Features Start -->
        <div class="container-fluid feature pb-5">
