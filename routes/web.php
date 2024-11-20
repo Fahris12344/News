@@ -5,15 +5,21 @@ use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\AdminMiddleware;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CategoryController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['auth'])->get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
-// routes/web.php
 
-Route::middleware(['auth', 'is_admin'])->get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
+    // Route untuk kategori
+    Route::get('/category', [CategoryController::class, 'index'])->name('admin.category');
+    
+    // Route lainnya untuk admin bisa ditambahkan di sini
+    Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+});
+
 
 
 Route::middleware('auth')->group(function () {

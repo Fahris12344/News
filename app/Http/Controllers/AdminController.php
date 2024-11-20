@@ -21,7 +21,7 @@ class AdminController extends Controller
         // Mengecek apakah pengguna yang login adalah admin
         if (Auth::check() && Auth::user()->role !== 'admin') {
             // Jika bukan admin, redirect ke halaman home
-            return redirect('/home'); // Atau ke route lain yang Anda inginkan
+            return redirect('/'); // Atau ke route lain yang Anda inginkan
         }
 
         // Menampilkan dashboard admin jika pengguna adalah admin
