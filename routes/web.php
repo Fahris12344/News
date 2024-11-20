@@ -8,6 +8,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CommentarController;
 use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\DashboardController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -48,8 +49,9 @@ Route::get('/news', function () {
     return view('news');
 });
 
-//admin
-Route::get('/admin/dashboard', function () {
-    return view('pages.admin.dashboard');
-});
+// //admin
+// Route::get('/admin/dashboard', function () {
+//     return view('pages.admin.dashboard');
+// });
 
+Route::get('/dashboard', [DashboardController::class, 'indexManual'])->name('dashboard');
