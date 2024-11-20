@@ -5,10 +5,10 @@
             <div class="col-md-6 col-lg-6 col-xl-4">
                 <div class="footer-item">
                     <a href="index.html" class="p-0">
-                        <h4 class="text-white"><i class="fas fa-search-dollar me-3"></i>Stocker</h4>
+                        <h4 class="text-white"><i class="fas fa-search-dollar me-3"></i>SMKS AL-AZHAR</h4>
                         <!-- <img src="assets/img/logo.png" alt="Logo"> -->
                     </a>
-                    <p class="mb-4">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing...</p>
+                    <p class="mb-4"> lembaga pendidikan kejuruan yang berkomitmen mencetak generasi unggul, berakhlak mulia, dan siap bersaing di dunia kerja melalui pembelajaran berbasis kompetensi dan teknologi terkini."</p>
                     <div class="d-flex">
                         <a href="#" class="bg-primary d-flex rounded align-items-center py-2 px-3 me-2">
                             <i class="fas fa-apple-alt text-white"></i>
@@ -40,7 +40,7 @@
             </div>
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item">
-                    <h4 class="text-white mb-4">Support</h4>
+                    <h4 class="text-white mb-4">Layanan</h4>
                     <a href="#"><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
                     <a href="#"><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a>
                     <a href="#"><i class="fas fa-angle-right me-2"></i> Disclaimer</a>
@@ -52,9 +52,9 @@
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item">
                     <h4 class="text-white mb-4">Contact Info</h4>
-                    <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center me-3">
                         <i class="fas fa-map-marker-alt text-primary me-3"></i>
-                        <p class="text-white mb-0">123 Street New York.USA</p>
+                        <p class="text-white mb-0">Jl. Imam Syafi'i No.45, Tugung, Sempu, Kec. Sempu, Kabupaten Banyuwangi, Jawa Timur 68468</p>
                     </div>
                     <div class="d-flex align-items-center">
                         <i class="fas fa-envelope text-primary me-3"></i>
