@@ -29,16 +29,18 @@
         @include('layouts.Admin-page.topbar') <!-- Include header -->
     </topbar>
 
-    <!-- Konten Utama -->
-    <main>
-        @yield('content') <!-- Bagian konten dinamis -->
-    </main>
+    <!-- Main Content -->
+    <div class="container-fluid page-body-wrapper">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            @include('layouts.Admin-page.sidebar') <!-- Include sidebar -->
+        </div>
 
-    <!-- Footer -->
-    <footer>
-        @include('layouts.Admin-page.footer') <!-- Include footer -->
-    </footer>
-
+        <!-- Konten Utama -->
+        <main class="main-content">
+            @yield('content') <!-- Bagian konten dinamis -->
+        </main>
+    </div>
 
     <!-- plugins:js -->
     <script src="{{ asset('assets-admin/vendors/js/vendor.bundle.base.js') }}"></script>
