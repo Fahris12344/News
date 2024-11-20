@@ -13,7 +13,7 @@
               <ul>
                   <li><a class="nav-link scrollto active" href="/">Home</a></li>
                   <!-- <li><a class="nav-link scrollto" href="#about">Visi|Misi</a></li> -->
-                  <li><a class="nav-link scrollto" href="jurusan.html">Berita</a></li>
+                  <li><a class="nav-link scrollto" href="{{route('news.index')}}">Berita</a></li>
                   <!-- <li><a class="nav-link scrollto" href="#Galeri">Galeri</a></li> -->
                   <li><a class="nav-link scrollto" href="#">Contact</a></li>
                   <li class="dropdown"><a href="#"><span>Opsi Lain</span><i class="bi bi-chevron-down"></i></a>
