@@ -1,4 +1,5 @@
-<?
+<?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -6,20 +7,20 @@ use App\Models\Category;
 
 class CategoryController extends Controller
 {
-    // Tampilkan daftar kategori
+    // Menampilkan daftar kategori
     public function index()
     {
         $categories = Category::all();
-        return view('categories.index', compact('categories'));
+        return view('pages.admin.category.index', compact('categories'));
     }
 
-    // Tampilkan form untuk menambahkan kategori baru
+    // Menampilkan form untuk menambahkan kategori baru
     public function create()
     {
-        return view('categories.create');
+        return view('pages.admin.category.create');
     }
 
-    // Simpan kategori baru ke database
+    // Menyimpan kategori baru ke database
     public function store(Request $request)
     {
         $request->validate([
@@ -30,20 +31,17 @@ class CategoryController extends Controller
             'name' => $request->name,
         ]);
 
-        return redirect()->route('categories.index')->with('success', 'Kategori berhasil ditambahkan.');
+        return redirect()->route('pages.admin.category.index')->with('success', 'Kategori berhasil ditambahkan.');
     }
 
-    // Tampilkan detail kategori (opsional)
-  
-
-    // Tampilkan form untuk mengedit kategori
+    // Menampilkan form untuk mengedit kategori
     public function edit($id)
     {
         $category = Category::findOrFail($id);
-        return view('categories.edit', compact('category'));
+        return view('pages.admin.category.edit', compact('category'));
     }
 
-    // Update kategori di database
+    // Memperbarui data kategori di database
     public function update(Request $request, $id)
     {
         $request->validate([
@@ -55,15 +53,15 @@ class CategoryController extends Controller
             'name' => $request->name,
         ]);
 
-        return redirect()->route('categories.index')->with('success', 'Kategori berhasil diperbarui.');
+        return redirect()->route('admin.category.index')->with('success', 'Kategori berhasil diperbarui.');
     }
 
-    // Hapus kategori
+    // Menghapus kategori dari database
     public function destroy($id)
     {
         $category = Category::findOrFail($id);
         $category->delete();
 
-        return redirect()->route('categories.index')->with('success', 'Kategori berhasil dihapus.');
+        return redirect()->route('admin.category.index')->with('success', 'Kategori berhasil dihapus.');
     }
 }
