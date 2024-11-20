@@ -12,10 +12,10 @@
           Smk Al Azhar
           </h1>
           <p >
-          <h2 style="color: white;">Selamat Datang di SMK Al Ahzar Sempu.
-            Kami dengan senang hati mempersembahkan
-            beberapa Jurusan yang telah meluluskan para murid terbaik kami.
-            <br>
+            <h2 style="color: white;">Selamat Datang di SMK Al Ahzar Sempu.  
+              Tetap terinformasi dengan berita terbaru kami, termasuk prestasi siswa, kegiatan ekstrakurikuler, dan program unggulan sekolah.  
+              Kami berkomitmen untuk terus mendukung perkembangan pendidikan dan membentuk generasi terbaik masa depan.  
+              <br>  
           </h2>
           </p>
           <div class="d-flex justify-content-center justify-content-lg-start">
@@ -25,7 +25,7 @@
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="200">
-          <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+          <img src="landing-pages/news.png" class="img-fluid animated" alt="">
           <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnNUepEc401x16udZXJc_U2wAm25pP5h_B4w&s" class="img-fluid animated w-70" alt=""> -->
         </div>
       </div>
@@ -438,22 +438,7 @@
     </div> -->
   </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6">
-            <!-- <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="#" method="post" class="text-center">
-              <a href="https://www.youtube.com/@smkalazharsempu" class="btn btn-primary rounded-2">Subscribe</a>
-            </form> -->
-          </div>
-        </div>
-      </div>
-    </div>
+ 
     <!-- <style>
       form.text-center {
         margin: 0 auto;
