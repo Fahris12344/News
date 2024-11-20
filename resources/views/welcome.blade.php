@@ -20,15 +20,15 @@
                                    <p class="mb-5 fs-5">"Menjadi Sumber Inspirasi, Membangun Generasi Cerdas, dan Mewujudkan
                                        Pendidikan Berkualitas."</p>
                                    <div class="d-flex align-items-center justify-content-center justify-content-md-end">
-                                       <h2 class="text-white me-2">Follow Us:</h2>
+                                       <h2 class="text-white me-2">Follow us:</h2>
                                        <div class="d-flex justify-content-end ms-2">
-                                           <a class="btn btn-md-square btn-light rounded-circle me-2" href=""><i
+                                           <a class="btn btn-md-square btn-light rounded-circle me-2" href="https://www.facebook.com/smkalazharsempu"><i
                                                    class="fab fa-facebook-f"></i></a>
-                                           <a class="btn btn-md-square btn-light rounded-circle mx-2" href=""><i
+                                           <a class="btn btn-md-square btn-light rounded-circle mx-2" href="https://twitter.com/smkalazharsempu"><i
                                                    class="fab fa-twitter"></i></a>
-                                           <a class="btn btn-md-square btn-light rounded-circle mx-2" href=""><i
+                                           <a class="btn btn-md-square btn-light rounded-circle mx-2" href="https://www.instagram.com/smkalazharsempu/"><i
                                                    class="fab fa-instagram"></i></a>
-                                           <a class="btn btn-md-square btn-light rounded-circle ms-2" href=""><i
+                                           <a class="btn btn-md-square btn-light rounded-circle ms-2" href="https://www.linkedin.com/in/rijal-annur-3b2083140/?originalSubdomain=id"><i
                                                    class="fab fa-linkedin-in"></i></a>
                                        </div>
                                    </div>
@@ -51,15 +51,15 @@
                                    <p class="mb-5 fs-5">"Informasi Terkini, Inspirasi Tiada Henti – Berita Sekolah untuk
                                        Masa Depan Ceriah!"</p>
                                    <div class="d-flex align-items-center justify-content-center">
-                                       <h2 class="text-white me-2">Follow Us:</h2>
+                                       <h2 class="text-white me-2">Follow us:</h2>
                                        <div class="d-flex justify-content-end ms-2">
-                                           <a class="btn btn-md-square btn-light rounded-circle me-2" href=""><i
+                                           <a class="btn btn-md-square btn-light rounded-circle me-2" href="https://www.facebook.com/smkalazharsempu"><i
                                                    class="fab fa-facebook-f"></i></a>
-                                           <a class="btn btn-md-square btn-light rounded-circle mx-2" href=""><i
+                                           <a class="btn btn-md-square btn-light rounded-circle mx-2" href="https://twitter.com/smkalazharsempu"><i
                                                    class="fab fa-twitter"></i></a>
-                                           <a class="btn btn-md-square btn-light rounded-circle mx-2" href=""><i
+                                           <a class="btn btn-md-square btn-light rounded-circle mx-2" href="https://www.instagram.com/smkalazharsempu/"><i
                                                    class="fab fa-instagram"></i></a>
-                                           <a class="btn btn-md-square btn-light rounded-circle ms-2" href=""><i
+                                           <a class="btn btn-md-square btn-light rounded-circle ms-2" href="https://www.linkedin.com/in/rijal-annur-3b2083140/?originalSubdomain=id"><i
                                                    class="fab fa-linkedin-in"></i></a>
                                        </div>
                                    </div>
@@ -75,55 +75,57 @@
        <!-- Navbar & Hero End -->
 
 
-       <!-- Abvout Start -->
-       <div class="container-fluid about py-5">
-           <div class="container py-5">
-               <div class="row g-5 align-items-center">
-                   <div class="col-xl-7 wow fadeInLeft" data-wow-delay="0.2s">
-                       <div>
-                           <h4 class="text-primary">About Us</h4>
-                           <h1 class="display-5 mb-4">Meet our company unless miss the opportunity</h1>
-                           <p class="mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum velit temporibus
-                               repudiandae ipsa, eaque perspiciatis cumque incidunt tenetur sequi reiciendis.
-                           </p>
-                           <div class="row g-4">
-                               <div class="col-md-6 col-lg-6 col-xl-6">
-                                   <div class="d-flex">
-                                       <div><i class="fas fa-lightbulb fa-3x text-primary"></i></div>
-                                       <div class="ms-4">
-                                           <h4>Business Consuluting</h4>
-                                           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                                       </div>
-                                   </div>
-                               </div>
-                               <div class="col-md-6 col-lg-6 col-xl-6">
-                                   <div class="d-flex">
-                                       <div><i class="bi bi-bookmark-heart-fill fa-3x text-primary"></i></div>
-                                       <div class="ms-4">
-                                           <h4>Year Of Expertise</h4>
-                                           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                                       </div>
-                                   </div>
-                               </div>
-                               <div class="col-sm-6">
-                                   <a href="#" class="btn btn-primary rounded-pill py-3 px-5 flex-shrink-0">Discover
-                                       Now</a>
-                               </div>
-                               <div class="col-sm-6">
-                                   <div class="d-flex">
-                                       <i class="fas fa-phone-alt fa-2x text-primary me-4"></i>
-                                       <div>
-                                           <h4>Call Us</h4>
-                                           <p class="mb-0 fs-5" style="letter-spacing: 1px;">+01234567890</p>
-                                       </div>
-                                   </div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="col-xl-5 wow fadeInRight" data-wow-delay="0.2s">
-                       <div class="bg-primary rounded position-relative overflow-hidden">
-                           <img src="assets/img/about-2.png" class="img-fluid rounded w-100" alt="">
+ <!-- About Start -->
+<div class="container-fluid about py-5">
+  <div class="container py-5">
+      <div class="row g-5 align-items-center">
+          <div class="col-xl-7 wow fadeInLeft" data-wow-delay="0.2s">
+              <div>
+                  <h4 class="text-primary">Tentang Kami</h4>
+                  <h1 class="display-5 mb-4">Kenali SMK Al Azhar dan Raih Masa Depan Gemilang</h1>
+                  <p class="mb-4">
+                      SMK Al Azhar adalah lembaga pendidikan kejuruan yang berkomitmen untuk mencetak generasi unggul 
+                      dengan keterampilan praktis dan nilai-nilai islami. Kami menyediakan berbagai program keahlian 
+                      yang dirancang untuk mendukung kebutuhan industri masa kini.
+                  </p>
+                  <div class="row g-4">
+                      <div class="col-md-6 col-lg-6 col-xl-6">
+                          <div class="d-flex">
+                              <div><i class="fas fa-lightbulb fa-3x text-primary"></i></div>
+                              <div class="ms-4">
+                                  <h4>Konsultasi Karir</h4>
+                                  <p>Kami memberikan bimbingan untuk membantu siswa meraih impian karirnya.</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-6 col-lg-6 col-xl-6">
+                          <div class="d-flex">
+                              <div><i class="bi bi-bookmark-heart-fill fa-3x text-primary"></i></div>
+                              <div class="ms-4">
+                                  <h4>Pengalaman Bertahun-Tahun</h4>
+                                  <p>SMK Al Azhar telah berdiri dan berpengalaman dalam mendidik generasi muda.</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-sm-6">
+                          <a href="#" class="btn btn-primary rounded-pill py-3 px-5 flex-shrink-0">Jelajahi Sekarang</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-xl-5 wow fadeInRight" data-wow-delay="0.2s">
+              <div class=" rounded position-relative overflow-hidden">
+                  <img src="assets\img\tentang-image1.png" class="img-fluid rounded w-100" alt="Tentang SMK Al Azhar">
+                  <div class="rounded-bottom">
+                      <img src="assets/img/about-5.jpg" class="img-fluid rounded-bottom w-100" alt="Foto SMK Al Azhar">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- About End -->
+
 
                            <div class="" style="position: absolute; top: -15px; right: -15px;">
                                <img src="assets/img/about-3.png" class="img-fluid"

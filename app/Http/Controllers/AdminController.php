@@ -25,7 +25,7 @@ class AdminController extends Controller
         }
 
         // Menampilkan dashboard admin jika pengguna adalah admin
-        return view('admin.dashboard');
+        return view('pages.admin.dashboard');
     }
 
     /**

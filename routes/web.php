@@ -15,7 +15,7 @@ Route::get('/', function () {
 
 
 Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
-    Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+    Route::get('/dashboard', [AdminController::class, 'index'])->name('pages.admin.dashboard');
     Route::get('/category', [CategoryController::class, 'index'])->name('admin.category');
     Route::resource('comments', CommentarController::class);
     Route::resource('news', NewsController::class);
