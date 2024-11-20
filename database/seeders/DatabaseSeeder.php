@@ -21,6 +21,12 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('password'), // Ganti dengan password yang aman
             'role' => 'admin',
         ]);
+        User::create([
+            'name' => 'Users Reguler',
+            'email' => 'user@gmail.com',
+            'password' => bcrypt('password'), // Ganti dengan password yang aman
+            'role' => 'user',
+        ]);
     }
     
 }
