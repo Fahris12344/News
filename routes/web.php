@@ -8,7 +8,6 @@ use App\Http\Middleware\IsAdmin;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-
 Route::middleware(['auth', IsAdmin::class])->prefix('admin')->group(function () {
     Route::get('/dashboard', function () {
         return view('admin.dashboard'); // Halaman khusus admin
@@ -30,11 +29,4 @@ Route::middleware('auth')->group(function () {
     Route::get('/berita/{id}', [HomeController::class, 'show'])->name('berita.show');
     Route::post('/berita/{id}/komentar', [UserKomentarController::class, 'store'])->name('komentar.store');
 });
-
-<<<<<<< HEAD
-require __DIR__.'/auth.php';
-
-//wee
-=======
 require __DIR__ . '/auth.php';
->>>>>>> 9b1f6bd183844ec0081fe3b268cb250473d6e454
