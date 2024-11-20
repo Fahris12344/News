@@ -2,64 +2,79 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Commentar;
 use Illuminate\Http\Request;
+use App\Models\Commentar; // Menggunakan model Commentar
+use App\Models\News;
+use App\Models\User;
 
 class CommentarController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    // Tampilkan daftar komentar
     public function index()
     {
-        //
+        $commentars = Commentar::with('user', 'news')->latest()->paginate(10); // Memuat data user dan news
+        return view('commentars.index', compact('commentars'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    // Tampilkan form untuk menambahkan komentar
+    public function create($news_id)
     {
-        //
+        $news = News::findOrFail($news_id);
+        return view('commentars.create', compact('news'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    // Simpan komentar baru
+    public function store(Request $request, $news_id)
     {
-        //
+        $request->validate([
+            'content' => 'required|string|max:1000',
+        ]);
+
+        // Menyimpan komentar terkait dengan user dan news
+        Commentar::create([
+            'content' => $request->content,
+            'user_id' => auth()->id(), // Menggunakan ID pengguna yang login
+            'news_id' => $news_id,
+        ]);
+
+        return redirect()->route('news.show', $news_id)->with('success', 'Komentar berhasil ditambahkan.');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Commentar $commentar)
+    // Tampilkan detail komentar (opsional)
+    public function show($id)
     {
-        //
+        $commentar = Commentar::findOrFail($id);
+        return view('commentars.show', compact('commentar'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Commentar $commentar)
+    // Tampilkan form untuk mengedit komentar
+    public function edit($id)
     {
-        //
+        $commentar = Commentar::findOrFail($id);
+        return view('commentars.edit', compact('commentar'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Commentar $commentar)
+    // Update komentar
+    public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'content' => 'required|string|max:1000',
+        ]);
+
+        $commentar = Commentar::findOrFail($id);
+        $commentar->update([
+            'content' => $request->content,
+        ]);
+
+        return redirect()->route('commentars.index')->with('success', 'Komentar berhasil diperbarui.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Commentar $commentar)
+    // Hapus komentar
+    public function destroy($id)
     {
-        //
+        $commentar = Commentar::findOrFail($id);
+        $commentar->delete();
+
+        return redirect()->route('commentars.index')->with('success', 'Komentar berhasil dihapus.');
     }
 }

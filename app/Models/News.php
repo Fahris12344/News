@@ -1,4 +1,4 @@
-<?php
+<?
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -8,12 +8,13 @@ class News extends Model
 {
     use HasFactory;
 
-    protected $table = 'news';
+    protected $fillable = [
+        'title', 'content', 'category_id', 'date'
+    ];
 
-    protected $fillable = ['title', 'content', 'category_id', 'date'];
-
+    // Relasi dengan Category
     public function category()
     {
-        return $this->belongsTo(Category::class, 'category_id');
+        return $this->belongsTo(Category::class);
     }
 }
