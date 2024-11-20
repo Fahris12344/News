@@ -52,12 +52,7 @@ class CommentarController extends Controller
             return redirect()->back()->with('success', 'Komentar berhasil ditambahkan!');
         }
     
-    
-    // Tampilkan detail komentar (opsional)
-   
 
-    // Tampilkan form untuk mengedit komentar
-   
 
     // Update komentar
     public function update(Request $request, $id)
