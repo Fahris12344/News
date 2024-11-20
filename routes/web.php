@@ -7,9 +7,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+
+use App\Http\Middleware\IsAdmin;
+
+Route::middleware(['auth', IsAdmin::class])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('admin.dashboard'); // Halaman khusus admin
+    })->name('admin.dashboard');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
