@@ -20,15 +20,15 @@
                                    <p class="mb-5 fs-5">"Menjadi Sumber Inspirasi, Membangun Generasi Cerdas, dan Mewujudkan
                                        Pendidikan Berkualitas."</p>
                                    <div class="d-flex align-items-center justify-content-center justify-content-md-end">
-                                       <h2 class="text-white me-2">Follow Us:</h2>
+                                       <h2 class="text-white me-2">Follow us:</h2>
                                        <div class="d-flex justify-content-end ms-2">
-                                           <a class="btn btn-md-square btn-light rounded-circle me-2" href=""><i
+                                           <a class="btn btn-md-square btn-light rounded-circle me-2" href="https://www.facebook.com/smkalazharsempu"><i
                                                    class="fab fa-facebook-f"></i></a>
-                                           <a class="btn btn-md-square btn-light rounded-circle mx-2" href=""><i
+                                           <a class="btn btn-md-square btn-light rounded-circle mx-2" href="https://twitter.com/smkalazharsempu"><i
                                                    class="fab fa-twitter"></i></a>
-                                           <a class="btn btn-md-square btn-light rounded-circle mx-2" href=""><i
+                                           <a class="btn btn-md-square btn-light rounded-circle mx-2" href="https://www.instagram.com/smkalazharsempu/"><i
                                                    class="fab fa-instagram"></i></a>
-                                           <a class="btn btn-md-square btn-light rounded-circle ms-2" href=""><i
+                                           <a class="btn btn-md-square btn-light rounded-circle ms-2" href="https://www.linkedin.com/in/rijal-annur-3b2083140/?originalSubdomain=id"><i
                                                    class="fab fa-linkedin-in"></i></a>
                                        </div>
                                    </div>
@@ -51,15 +51,15 @@
                                    <p class="mb-5 fs-5">"Informasi Terkini, Inspirasi Tiada Henti – Berita Sekolah untuk
                                        Masa Depan Ceriah!"</p>
                                    <div class="d-flex align-items-center justify-content-center">
-                                       <h2 class="text-white me-2">Follow Us:</h2>
+                                       <h2 class="text-white me-2">Follow us:</h2>
                                        <div class="d-flex justify-content-end ms-2">
-                                           <a class="btn btn-md-square btn-light rounded-circle me-2" href=""><i
+                                           <a class="btn btn-md-square btn-light rounded-circle me-2" href="https://www.facebook.com/smkalazharsempu"><i
                                                    class="fab fa-facebook-f"></i></a>
-                                           <a class="btn btn-md-square btn-light rounded-circle mx-2" href=""><i
+                                           <a class="btn btn-md-square btn-light rounded-circle mx-2" href="https://twitter.com/smkalazharsempu"><i
                                                    class="fab fa-twitter"></i></a>
-                                           <a class="btn btn-md-square btn-light rounded-circle mx-2" href=""><i
+                                           <a class="btn btn-md-square btn-light rounded-circle mx-2" href="https://www.instagram.com/smkalazharsempu/"><i
                                                    class="fab fa-instagram"></i></a>
-                                           <a class="btn btn-md-square btn-light rounded-circle ms-2" href=""><i
+                                           <a class="btn btn-md-square btn-light rounded-circle ms-2" href="https://www.linkedin.com/in/rijal-annur-3b2083140/?originalSubdomain=id"><i
                                                    class="fab fa-linkedin-in"></i></a>
                                        </div>
                                    </div>
