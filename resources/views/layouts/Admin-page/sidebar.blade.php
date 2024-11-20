@@ -32,11 +32,5 @@
             </a>
           </li> 
           </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="/admin/comment" aria-expanded="false" aria-controls="auth">
-            <i class="bi bi-chat-left-dots" style="font-size:18px;"></i>
-              <span class="menu-title" style="margin-left:18px;">Komentar</span>
-            </a>
-          </li>
         </ul>
-      </nav>
+    </nav>

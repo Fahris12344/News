@@ -80,7 +80,8 @@
               <div class="col-md-6 grid-margin stretch-card">
                 <div class="card tale-bg">
                     <div class="card-people mt-auto">
-                        
+                        <div class="weather-info">
+                        </div>
                     </div>
                 </div>
             </div>            
