@@ -18,10 +18,10 @@ Route::get('/', function () {
 Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::get('/dashboard', [AdminController::class, 'index'])->name('pages.admin.dashboard');
     // Route manual untuk kategori berita
-    Route::resource('/admin/category', CategoryController::class);
-    Route::resource('/admin/news', NewsController::class);
-    Route::resource('/admin/announcement', AnnouncementController::class);
-    Route::resource('/admin/commentar', CommentarController::class);
+    Route::resource('category', CategoryController::class);
+    Route::resource('news', NewsController::class);
+    Route::resource('announcement', AnnouncementController::class);
+    Route::resource('commentar', CommentarController::class);
 });
 
 
