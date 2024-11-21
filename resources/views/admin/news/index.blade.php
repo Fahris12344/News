@@ -1,7 +1,7 @@
 @extends('layouts.Admin-page.app')
 
 @section('content')
-<div class="container" style="margin-left: 250px;"> <!-- Tambahkan margin-left untuk menyesuaikan posisi konten -->
+<div class="container">
     <h1>Daftar Berita</h1>
 
     <!-- Alert Success -->
@@ -12,7 +12,7 @@
     @endif
 
     <!-- Form Filter -->
-    <form method="GET" action="{{ route('pages.admin.news.index') }}" class="mb-4">
+    <form method="GET" action="{{ route('news.index') }}" class="mb-4">
         <div class="row">
             <div class="col-md-3">
                 <input type="text" name="search" class="form-control" placeholder="Cari judul/konten..." value="{{ request('search') }}">
@@ -41,7 +41,7 @@
 
     <!-- Tombol Tambah Berita -->
     <div class="mb-3">
-        <a href="{{ route('pages.admin.news.create') }}" class="btn btn-success">Tambah Berita</a>
+        <a href="{{ route('news.create') }}" class="btn btn-success">Tambah Berita</a>
     </div>
 
     <!-- Card Layout untuk Daftar Berita -->
@@ -58,7 +58,7 @@
                         <h5 class="card-title">{{ $item->title }}</h5>
                         <p class="card-text text-muted">Kategori: {{ $item->category->name ?? 'Tidak ada kategori' }}</p>
                         <p class="card-text">{{ Str::limit($item->content, 100) }}</p>
-                        <a href="{{ route('pages.admin.news.show', $item->id) }}" class="btn btn-primary btn-sm">Lihat Detail</a>
+                        <a href="{{ route('news.show', $item->id) }}" class="btn btn-primary btn-sm">Lihat Detail</a>
                     </div>
                     <div class="card-footer text-muted">
                         Tanggal: {{ $item->start_date }} - {{ $item->end_date }}

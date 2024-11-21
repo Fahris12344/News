@@ -2,24 +2,21 @@
 
 @section('content')
 <div class="container d-flex justify-content-center">
-    <!-- Card dipusatkan dengan d-flex -->
-    <div class="card shadow-sm" style="width: 60%; margin-top: 20px;">
+    <div class="card shadow-sm" style="width: 60%;">
         <div class="card-body">
-            <h1 class="text-center mb-4">Edit Berita</h1>
-            <form action="{{ route('pages.admin.news.update', $news->id) }}" method="POST" enctype="multipart/form-data">
+            <h1 class="text-center mb-4">Tambah Berita Baru</h1>
+            <form action="{{ route('news.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
-                @method('PUT')
-
                 <div class="row">
                     <!-- Kolom Kiri: Preview Gambar -->
                     <div class="col-md-5 d-flex flex-column align-items-center">
                         <div class="form-group text-center w-100">
                             <label for="image" class="form-label d-block">Preview Gambar</label>
-                            <!-- Perbesar preview gambar -->
+                            <!-- Perbesar kotak input gambar -->
                             <img 
                                 id="image-preview" 
-                                src="{{ $news->image ? asset('storage/' . $news->image) : 'https://via.placeholder.com/500x400?text=Preview+Gambar' }}" 
-                                alt="Gambar Berita" 
+                                src="https://via.placeholder.com/500x400?text=Preview+Gambar" 
+                                alt="Preview Gambar" 
                                 class="img-fluid mb-3" 
                                 style="border: 1px solid #ddd; padding: 5px; width: 100%; height: 350px; object-fit: cover;">
                             <input 
@@ -39,7 +36,7 @@
                     <div class="col-md-7">
                         <div class="form-group">
                             <label for="title">Judul Berita</label>
-                            <input type="text" name="title" id="title" class="form-control @error('title') is-invalid @enderror" value="{{ old('title', $news->title) }}">
+                            <input type="text" name="title" id="title" class="form-control @error('title') is-invalid @enderror" value="{{ old('title') }}">
                             @error('title')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
@@ -47,7 +44,7 @@
 
                         <div class="form-group">
                             <label for="content">Konten</label>
-                            <textarea name="content" id="content" class="form-control @error('content') is-invalid @enderror" rows="5">{{ old('content', $news->content) }}</textarea>
+                            <textarea name="content" id="content" class="form-control @error('content') is-invalid @enderror" rows="5">{{ old('content') }}</textarea>
                             @error('content')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
@@ -58,7 +55,7 @@
                             <select name="category_id" id="category_id" class="form-control @error('category_id') is-invalid @enderror">
                                 <option value="">-- Pilih Kategori --</option>
                                 @foreach($categories as $category)
-                                    <option value="{{ $category->id }}" {{ old('category_id', $news->category_id) == $category->id ? 'selected' : '' }}>
+                                    <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>
                                         {{ $category->name }}
                                     </option>
                                 @endforeach
@@ -72,7 +69,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="start_date">Tanggal Mulai</label>
-                                    <input type="date" name="start_date" id="start_date" class="form-control @error('start_date') is-invalid @enderror" value="{{ old('start_date', $news->start_date) }}">
+                                    <input type="date" name="start_date" id="start_date" class="form-control @error('start_date') is-invalid @enderror" value="{{ old('start_date') }}">
                                     @error('start_date')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
@@ -81,7 +78,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="end_date">Tanggal Selesai</label>
-                                    <input type="date" name="end_date" id="end_date" class="form-control @error('end_date') is-invalid @enderror" value="{{ old('end_date', $news->end_date) }}">
+                                    <input type="date" name="end_date" id="end_date" class="form-control @error('end_date') is-invalid @enderror" value="{{ old('end_date') }}">
                                     @error('end_date')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
@@ -89,7 +86,7 @@
                             </div>
                         </div>
 
-                        <button type="submit" class="btn btn-primary mt-3">Update</button>
+                        <button type="submit" class="btn btn-primary mt-4">Simpan</button>
                     </div>
                 </div>
             </form>

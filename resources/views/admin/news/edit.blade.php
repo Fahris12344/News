@@ -6,7 +6,7 @@
     <div class="card shadow-sm" style="width: 60%; margin-top: 20px;">
         <div class="card-body">
             <h1 class="text-center mb-4">Edit Berita</h1>
-            <form action="{{ route('pages.admin.news.update', $news->id) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('news.update', $news->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
 

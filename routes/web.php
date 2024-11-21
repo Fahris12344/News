@@ -25,6 +25,7 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::get('/news/create', [AdminController::class, 'createNews'])->name('pages.admin.news.create');
     Route::post('/news', [AdminController::class, 'storeNews'])->name('pages.admin.news.store');
     Route::get('/news/{id}/edit', [AdminController::class, 'editNews'])->name('pages.admin.news.edit');
+    Route::get('/news/{id}/show', [AdminController::class, 'showNews'])->name('pages.admin.news.show');
     Route::put('/news/{id}', [AdminController::class, 'updateNews'])->name('pages.admin.news.update');
     Route::delete('/news/{id}', [AdminController::class, 'destroyNews'])->name('pages.admin.news.destroy');
 
