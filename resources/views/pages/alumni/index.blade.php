@@ -19,8 +19,7 @@
                 ALUMNI SMK AL-AZHAR
              </h4>
              <p class="text-white wow fadeInUp" data-wow-delay="0.2s">
-                 Alumni sekolah kami telah mencetak banyak prestasi gemilang di berbagai bidang, menjadi bukti nyata
-                 komitmen kami terhadap pendidikan berkualitas. Mari bergabung dan jadilah bagian dari cerita sukses ini!
+                Mari bergabung dan berbagi pengalaman bersama alumni SMK Al-Azhar untuk masa depan yang lebih baik!
              </p>
          </div>
 
@@ -32,10 +31,9 @@
      <div class="container-fluid team pb-5">
          <div class="container pb-5">
              <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                 <h1 class="display-5 mb-4 text-success">TEAM</h1>
-                 <p class="mb-0">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum
-                     quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit
-                     alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.
+                 <h1 class="display-6 mb-4 text-dark">ALUMNI </h1>
+                 <p class="mb-0">  Alumni sekolah kami telah mencetak banyak prestasi gemilang di berbagai bidang, menjadi bukti nyata
+                    komitmen kami terhadap pendidikan berkualitas. Mari bergabung dan jadilah bagian dari cerita sukses ini!
                  </p>
              </div>
              <div class="row g-4">

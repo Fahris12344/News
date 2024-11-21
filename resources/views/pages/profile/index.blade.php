@@ -28,7 +28,7 @@
     <!-- Header End -->
 
     <!-- Profil Sekolah Start -->
-    <div class="container-fluid py-5" style="background-color: #f8f9fa;">
+    <div class="container-fluid py-5" style="background-color: #ffffff;">
         <div class="container">
 
             <!-- Title -->
