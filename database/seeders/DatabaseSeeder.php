@@ -27,6 +27,13 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('password'), // Ganti dengan password yang aman
             'role' => 'user',
         ]);
+
+        $this->call([
+            CategorySeeder::class,
+            NewsSeeder::class,
+            CommentSeeder::class,
+            AnnouncementSeeder::class,
+        ]);
     }
     
 }

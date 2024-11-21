@@ -1,71 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Berita</title>
-    <link rel="icon" href="{{asset('foto/download.png')}}">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <!-- plugins:css -->
-    <link rel="stylesheet" href="{{ asset('assets-user/vendors/feather/feather.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets-user/vendors/ti-icons/css/themify-icons.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets-user/vendors/css/vendor.bundle.base.css') }}">
-    <!-- Endinject -->
-    <!-- Plugin css for this page -->
-    <link rel="stylesheet" href="{{ asset('assets-user/vendors/datatables.net-bs4/dataTables.bootstrap4.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets-user/vendors/ti-icons/css/themify-icons.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets-user/js/select.dataTables.min.css') }}">
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <link rel="stylesheet" href="{{ asset('assets-user/css/vertical-layout-light/style.css') }}">
-    <!-- endinject -->
-    <link rel="shortcut icon" href="{{ asset('assets-user/images/favicon.png') }}" />
-</head>
+    <head>
+        <meta charset="utf-8">
+        <title>Newsers - Free HTML Magazine Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
 
-<body>
+        <!-- Google Web Fonts -->
+       
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@100;600;800&display=swap" rel="stylesheet"> 
 
-    <!-- Header -->
-    <topbar>
-        @include('layouts.user-page.topbar') <!-- Include header -->
-    </topbar>
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Main Content -->
-    <div class="container-fluid page-body-wrapper">
-        <!-- Sidebar -->
-        {{-- <div class="sidebar">
-            @include('layouts.user-page.sidebar') <!-- Include sidebar -->
-        </div> --}}
 
-        <!-- Konten Utama -->
-        <main class="main-content">
-            @yield('content') <!-- Bagian konten dinamis -->
-        </main>
-    </div>
 
-    <!-- plugins:js -->
-    <script src="{{ asset('assets-user/vendors/js/vendor.bundle.base.js') }}"></script>
-    <!-- endinject -->
-    <!-- Plugin js for this page -->
-    <script src="{{ asset('assets-user/vendors/chart.js/Chart.min.js') }}"></script>
-    <script src="{{ asset('assets-user/vendors/datatables.net/jquery.dataTables.js') }}"></script>
-    <script src="{{ asset('assets-user/vendors/datatables.net-bs4/dataTables.bootstrap4.js') }}"></script>
-    <script src="{{ asset('assets-user/js/dataTables.select.min.js') }}"></script>
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="{{ asset('assets-user/css/bootstrap.min.css') }}" rel="stylesheet">
 
-    <!-- End plugin js for this page -->
-    <!-- inject:js -->
-    <script src="{{ asset('assets-user/js/off-canvas.js') }}"></script>
-    <script src="{{ asset('assets-user/js/hoverable-collapse.js') }}"></script>
-    <script src="{{ asset('assets-user/js/template.js') }}"></script>
-    <script src="{{ asset('assets-user/js/settings.js') }}"></script>
-    <script src="{{ asset('assets-user/js/todolist.js') }}"></script>
-    <!-- endinject -->
-    <!-- Custom js for this page-->
-    <script src="{{ asset('assets-user/js/dashboard.js') }}"></script>
-    <script src="{{ asset('assets-user/js/Chart.roundedBarCharts.js') }}"></script>
-    <!-- End custom js for this page-->
+        <!-- Template Stylesheet -->
+        <link href="{{ asset('assets-user/css/style.css') }}" rel="stylesheet">
+    </head>
 
-</body>
+    <body>
+
+
+
+
+@include('layouts.user-page.topbar')
+
+
+<div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+aria-labelledby="userDropdown">
+<a class="dropdown-item" href="/profile">
+    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+    Profile
+</a>
+<a class="dropdown-item" href="#">
+    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+    Settings
+</a>
+<a class="dropdown-item" href="#">
+    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+    Activity Log
+</a>
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+  Logout
+</a>
+
+<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+  @csrf
+</form>
+
+</div>
+
+ @yield('content')
+
+        @include('layouts.user-page.footer')
+        <!-- Features Start -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary border-2 border-white rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="{{ asset('assets-userlib/easing/easing.min.js') }}"></script>
+        <script src="{{ asset('assets-userlib/waypoints/waypoints.min.js') }}"></script>
+        <script src="{{ asset('assets-userlib/owlcarousel/owl.carousel.min.js') }}"></script>
+
+        <!-- Template Javascript -->
+        <script src="{{ asset('assets-userjs/main.js') }}"></script>
+    </body>
 
 </html>

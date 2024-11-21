@@ -1,110 +1,56 @@
-<nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-    <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-      <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="{{ asset('Logo/smkLogo.png') }}" class="mr-2" alt="logo"/>News</a>
+<!-- Navbar start -->
+<div class="container-fluid sticky-top px-0">
+    <div class="container-fluid bg-light">
+        <div class="container px-0">
+            <nav class="navbar navbar-light navbar-expand-xl">
+                <a href="index.html" class="navbar-brand mt-3">
+                    <p class="text-primary display-6 mb-2" style="line-height: 0;">News</p>
+                    <small class="text-body fw-normal" style="letter-spacing: 12px;"></small>
+                </a>
+                <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars text-primary"></span>
+                </button>
+                <div class="collapse navbar-collapse bg-light py-3" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="detail-page.html" class="nav-item nav-link">Detail Page</a>
+                        <a href="404.html" class="nav-item nav-link">404 Page</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Dropdown</a>
+                            <div class="dropdown-menu m-0 bg-secondary rounded-0">
+                                <a href="#" class="dropdown-item">Dropdown 1</a>
+                                <a href="#" class="dropdown-item">Dropdown 2</a>
+                                <a href="#" class="dropdown-item">Dropdown 3</a>
+                                <a href="#" class="dropdown-item">Dropdown 4</a>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                    </div>
+
+                    <div class="navbar-nav ms-auto">
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> Profile
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow animated--grow-in" aria-labelledby="userDropdown">
+                                <li><a class="dropdown-item" href="/profile"><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>Profile</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>Settings</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>Activity Log</a></li>
+                                <div class="dropdown-divider"></div>
+                                <li>
+                                    <a class="dropdown-item" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>Logout
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </div>
-    <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-      <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-        <span class="icon-menu"></span>
-      </button>
-      <ul class="navbar-nav mr-lg-2">
-        <li class="nav-item nav-search d-none d-lg-block">
-          <div class="input-group">
-            <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
-              <span class="input-group-text" id="search">
-                <i class="icon-search"></i>
-              </span>
-            </div>
-            <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
-          </div>
-        </li>
-      </ul>
-      <ul class="navbar-nav navbar-nav-center">
-        <!-- Berita Menu with Icon -->
-        <li class="nav-item">
-          <a href="/news" class="nav-link">
-            <i class="fas fa-newspaper mr-2"></i> Berita
-          </a>
-        </li>
-      
-        <!-- Pengumuman Menu with Icon -->
-        <li class="nav-item">
-          <a href="/pengumuman" class="nav-link">
-            <i class="fas fa-bullhorn mr-2"></i> Pengumuman
-          </a>
-        </li>
-      </ul>
-      <ul class="navbar-nav navbar-nav-right">
-        <li class="nav-item dropdown">
-          <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
-            <i class="icon-bell mx-0"></i>
-            <span class="count"></span>
-          </a>
-          <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
-            <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
-            <a class="dropdown-item preview-item">
-              <div class="preview-thumbnail">
-                <div class="preview-icon bg-success">
-                  <i class="ti-info-alt mx-0"></i>
-                </div>
-              </div>
-              <div class="preview-item-content">
-                <h6 class="preview-subject font-weight-normal">Application Error</h6>
-                <p class="font-weight-light small-text mb-0 text-muted">
-                  Just now
-                </p>
-              </div>
-            </a>
-            <a class="dropdown-item preview-item">
-              <div class="preview-thumbnail">
-                <div class="preview-icon bg-warning">
-                  <i class="ti-settings mx-0"></i>
-                </div>
-              </div>
-              <div class="preview-item-content">
-                <h6 class="preview-subject font-weight-normal">Settings</h6>
-                <p class="font-weight-light small-text mb-0 text-muted">
-                  Private message
-                </p>
-              </div>
-            </a>
-            <a class="dropdown-item preview-item">
-              <div class="preview-thumbnail">
-                <div class="preview-icon bg-info">
-                  <i class="ti-user mx-0"></i>
-                </div>
-              </div>
-              <div class="preview-item-content">
-                <h6 class="preview-subject font-weight-normal">New user registration</h6>
-                <p class="font-weight-light small-text mb-0 text-muted">
-                  2 days ago
-                </p>
-              </div>
-            </a>
-          </div>
-        </li>
-        <li class="nav-item nav-profile dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-            <img src="{{ asset('assets-user/images/faces/face28.jpg') }}" alt="profile" />
-          </a>
-          <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-            <a class="dropdown-item">
-              <i class="ti-settings text-primary"></i>
-              Settings
-            </a>
-            <a class="dropdown-item">
-              <i class="ti-power-off text-primary"></i>
-              Logout
-            </a>
-          </div>
-        </li>
-        <li class="nav-item nav-settings d-none d-lg-flex">
-          <a class="nav-link" href="#">
-            <i class="icon-ellipsis"></i>
-          </a>
-        </li>
-      </ul>
-      <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
-        <span class="icon-menu"></span>
-      </button>
-    </div>
-  </nav>
+</div>
+<!-- Navbar End -->
