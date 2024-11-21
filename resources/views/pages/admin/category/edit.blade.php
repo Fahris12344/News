@@ -56,7 +56,7 @@
           </div>
           <div class="card-body">
             <!-- Form Edit Kategori -->
-            <form action="{{ route('pages.admin.category.update', $category->id) }}" method="POST">
+            <form action="{{ route('kategori.update', $category->id) }}" method="POST">
               @csrf
               @method('PUT') <!-- Menandakan bahwa ini adalah metode PUT untuk update -->
 

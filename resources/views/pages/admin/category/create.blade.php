@@ -55,7 +55,7 @@
                     <h3 class="card-title">Tambah Kategori</h3>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('pages.admin.category.store') }}" method="POST">
+                    <form action="{{ route('kategori.store') }}" method="POST">
                         @csrf
                         <!-- Nama Kategori -->
                         <div class="form-group">
@@ -78,7 +78,7 @@
                         <!-- Tombol Submit -->
                         <div class="form-group text-right">
                             <button type="submit" class="btn btn-primary">Simpan</button>
-                            <a href="{{ route('pages.admin.category.index') }}" class="btn btn-secondary">Batal</a>
+                            <a href="{{ route('kategori.index') }}" class="btn btn-secondary">Batal</a>
                         </div>
                     </form>
                 </div>

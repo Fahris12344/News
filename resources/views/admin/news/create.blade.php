@@ -1,24 +1,25 @@
 @extends('layouts.Admin-page.app')
 
 @section('content')
-<div class="container d-flex justify-content-center">
-    <div class="card shadow-sm" style="width: 60%;">
-        <div class="card-body">
-            <h1 class="text-center mb-4">Tambah Berita Baru</h1>
+<div class="container-fluid py-4 d-flex justify-content-center">
+    <div class="card shadow-sm w-50" style="max-width: 1200px"> <!-- Maksimal lebar card diatur -->
+        <div class="card-body text-end"> <!-- Mengatur teks di dalam card-body ke kanan -->
+            <h1 class="mb-4">Tambah Berita Baru</h1> <!-- Judul diletakkan di kanan -->
             <form action="{{ route('news.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
-                <div class="row">
+                <div class="row justify-content-center">   
                     <!-- Kolom Kiri: Preview Gambar -->
                     <div class="col-md-5 d-flex flex-column align-items-center">
                         <div class="form-group text-center w-100">
                             <label for="image" class="form-label d-block">Preview Gambar</label>
-                            <!-- Perbesar kotak input gambar -->
-                            <img 
-                                id="image-preview" 
-                                src="https://via.placeholder.com/500x400?text=Preview+Gambar" 
-                                alt="Preview Gambar" 
-                                class="img-fluid mb-3" 
-                                style="border: 1px solid #ddd; padding: 5px; width: 100%; height: 350px; object-fit: cover;">
+                            <div style="width: 100%; height: 350px; overflow: hidden; display: flex; justify-content: center; align-items: center;">
+                                <img 
+                                    id="image-preview" 
+                                    src="https://via.placeholder.com/500x400?text=Preview+Gambar" 
+                                    alt="Preview Gambar" 
+                                    class="img-fluid" 
+                                    style="object-fit: contain; width: 100%; height: 100%; border: 1px solid #ddd; padding: 5px;">
+                            </div>
                             <input 
                                 type="file" 
                                 name="image" 

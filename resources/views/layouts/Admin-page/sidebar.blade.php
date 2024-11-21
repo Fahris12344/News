@@ -39,7 +39,7 @@
 
     <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
-    <a class="nav-link" href="/admin/category">
+    <a class="nav-link" href="{{route('kategori.index')}}">
     <i class="bi bi-tag"></i>
             <span>Kategori</span>
         </a>

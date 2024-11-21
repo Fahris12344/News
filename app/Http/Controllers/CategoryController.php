@@ -17,7 +17,7 @@ class CategoryController extends Controller
     // Menampilkan form untuk menambahkan kategori baru
     public function create()
     {
-        return view('pages.admin.category.create');
+        return view('kategori.index');
     }
 
     // Menyimpan kategori baru ke database
@@ -31,14 +31,14 @@ class CategoryController extends Controller
             'name' => $request->name,
         ]);
 
-        return redirect()->route('pages.admin.category.index')->with('success', 'Kategori berhasil ditambahkan.');
+        return redirect()->route('kategori.index')->with('success', 'Kategori berhasil ditambahkan.');
     }
 
     // Menampilkan form untuk mengedit kategori
     public function edit($id)
     {
         $category = Category::findOrFail($id);
-        return view('pages.admin.category.edit', compact('category'));
+        return view('kategori.edit', compact('category'));
     }
 
     // Memperbarui data kategori di database
@@ -53,7 +53,7 @@ class CategoryController extends Controller
             'name' => $request->name,
         ]);
 
-        return redirect()->route('admin.category.index')->with('success', 'Kategori berhasil diperbarui.');
+        return redirect()->route('kategori.index')->with('success', 'Kategori berhasil diperbarui.');
     }
 
     // Menghapus kategori dari database
@@ -62,6 +62,6 @@ class CategoryController extends Controller
         $category = Category::findOrFail($id);
         $category->delete();
 
-        return redirect()->route('admin.category.index')->with('success', 'Kategori berhasil dihapus.');
+        return redirect()->route('kategori.index')->with('success', 'Kategori berhasil dihapus.');
     }
 }
