@@ -77,8 +77,8 @@
                                             <i class="fab fa-firefox-browser fa-2x"></i>
                                         </div>
                                         <div>
-                                            <h4>Yoursite@ex.com</h4>
-                                            <p class="mb-0">(+012) 3456 </p>
+                                            <h4>Website Kami</h4>
+                                            <p class="mb-0">http://smkalazhar.sch.id/ </p>
                                         </div>
                                     </div>
                                 </div>
