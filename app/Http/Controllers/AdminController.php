@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\News;
 use App\Models\User;
+use App\Models\Commentar;
+use App\Models\like;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -174,7 +177,7 @@ class AdminController extends Controller
 
         News::create($data);
 
-        return redirect()->route('pages.news.index')->with('success', 'Berita berhasil ditambahkan!');
+        return redirect()->route('pages.admin.news.index')->with('success', 'Berita berhasil ditambahkan!');
     }
 
     /**
@@ -257,6 +260,73 @@ class AdminController extends Controller
 
         return redirect()->route('pages.news.index')->with('success', 'Berita berhasil dihapus!');
     }
+    public function likeNews($id)
+    {
+        $news = News::findOrFail($id);
+
+        // Cek apakah user sudah memberikan like/dislike
+        $existingLike = Like::where('user_id', Auth::id())
+                            ->where('news_id', $id)
+                            ->first();
+
+        if ($existingLike) {
+            $existingLike->delete(); // Hapus jika sudah ada like/dislike
+        }
+
+        // Tambahkan like baru
+        Like::create([
+            'user_id' => Auth::id(),
+            'news_id' => $id,
+            'type' => 'like'
+        ]);
+
+        return back()->with('success', 'Anda menyukai berita ini.');
+    }
+
+    // Fungsi untuk menambahkan Dislike
+    public function dislikeNews($id)
+    {
+        $news = News::findOrFail($id);
+
+        // Cek apakah user sudah memberikan like/dislike
+        $existingDislike = Like::where('user_id', Auth::id())
+                               ->where('news_id', $id)
+                               ->first();
+
+        if ($existingDislike) {
+            $existingDislike->delete(); // Hapus jika sudah ada like/dislike
+        }
+
+        // Tambahkan dislike baru
+        Like::create([
+            'user_id' => Auth::id(),
+            'news_id' => $id,
+            'type' => 'dislike'
+        ]);
+
+        return back()->with('success', 'Anda tidak menyukai berita ini.');
+    }
+
+    // Fungsi untuk menambahkan Komentar
+    public function commentNews(Request $request, $id)
+    {
+        $news = News::findOrFail($id);
+
+        // Validasi komentar
+        $request->validate([
+            'comment' => 'required|string|max:500'
+        ]);
+
+        // Simpan komentar ke database
+        Comment::create([
+            'user_id' => Auth::id(),
+            'news_id' => $id,
+            'content' => $request->comment
+        ]);
+
+        return back()->with('success', 'Komentar berhasil ditambahkan.');
+    }
+
 
     /**
      * Set pengguna menjadi admin.

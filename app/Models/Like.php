@@ -4,10 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Commentar extends Model
+class Like extends Model
 {
-    protected $table = 'comments';
-    protected $fillable = ['user_id', 'news_id', 'content'];
+    protected $fillable = ['user_id', 'news_id', 'type'];
 
     // Relasi ke User
     public function user()

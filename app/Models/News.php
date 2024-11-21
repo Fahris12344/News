@@ -9,7 +9,7 @@ class News extends Model
     use HasFactory;
 
     protected $fillable = [
-        'title', 'content', 'category_id', 'start-date', 'end-date', 
+        'title', 'content', 'category_id', 'start_date', 'end_date', 'image', 
     ];
 
     // Relasi dengan Category
@@ -17,4 +17,12 @@ class News extends Model
     {
         return $this->belongsTo(Category::class);
     }
+    public function likes()
+{
+    return $this->hasMany(Like::class);
+}
+public function comments()
+{
+    return $this->hasMany(Commentar::class);
+}
 }

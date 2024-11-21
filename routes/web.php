@@ -13,9 +13,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
-    Route::get('/dashboard', [AdminController::class, 'index'])->name('pages.admin.dashboard');
+Route::middleware('auth')->group(function () {
+    Route::post('/news/{id}/like', [adminController::class, 'dislikeNews'])->name('news.like');
+    Route::post('/news/{id}/dislike', [adminController::class, 'dislikeNews'])->name('news.dislike');
+    Route::post('/news/{id}/comment', [adminController::class, 'dislikeNews'])->name('news.comment');
+    
+    Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
+        Route::get('/dashboard', [AdminController::class, 'index'])->name('pages.admin.dashboard');
+        Route::get('/category', [AdminController::class, 'category'])->name('pages.admin.category.index');
+        Route::get('/category/create', [AdminController::class, 'createCategory'])->name('pages.admin.category.create');
+        Route::post('/category', [AdminController::class, 'storeCategory'])->name('pages.admin.category.store');
+        Route::get('/category/{id}/edit', [AdminController::class, 'editCategory'])->name('pages.admin.category.edit');
+        Route::put('/category/{id}', [AdminController::class, 'updateCategory'])->name('pages.admin.category.update');
+    Route::delete('/category/{id}', [AdminController::class, 'destroyCategory'])->name('pages.admin.category.destroy');
+    
     Route::resource('kategori', CategoryController::class);
     Route::get('/news', [AdminController::class, 'news'])->name('pages.admin.news.index');
     Route::get('/news/create', [AdminController::class, 'createNews'])->name('pages.admin.news.create');
@@ -38,7 +49,6 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
 
 
 
-Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
@@ -66,4 +76,3 @@ Route::get('/contact', function () {
 //     return view('pages.admin.dashboard');
 // });
 
-Route::get('/dashboard', [DashboardController::class, 'indexManual'])->name('dashboard');

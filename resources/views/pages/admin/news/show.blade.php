@@ -36,13 +36,13 @@
             <!-- Tombol Like dan Dislike -->
             <div class="text-center mt-4">
                 @if(Auth::check())
-                    <form action="" method="POST" class="d-inline">
+                    <form action="{{ route('news.like', $news->id) }}" method="POST" class="d-inline">
                         @csrf
                         <button type="submit" class="btn btn-success">
                             Like 
                         </button>
                     </form>
-                    <form action="" method="POST" class="d-inline">
+                    <form action="{{ route('news.dislike', $news->id) }}" method="POST" class="d-inline">
                         @csrf
                         <button type="submit" class="btn btn-danger">
                             Dislike 
@@ -57,7 +57,7 @@
             <div class="mt-5">
                 <h5><strong>Tambahkan Komentar:</strong></h5>
                 @if(Auth::check())
-                    <form action="" method="POST">
+                    <form action="{{ route('news.comment', $news->id) }}" method="POST">
                         @csrf
                         <div class="form-group">
                             <textarea name="comment" class="form-control" rows="3" placeholder="Tulis komentar..."></textarea>
@@ -75,18 +75,29 @@
             <!-- Daftar Komentar -->
             <div class="mt-5">
                 <h5><strong>Komentar:</strong></h5>
-                {{-- @if($news->comments->count() == 0)
-                    @foreach($news->comments as $comment)
-                        <div class="mb-3">
-                            <strong>{{ $comment->user->name }}</strong>
-                            <p class="mb-1">{{ $comment->content }}</p>
-                            <small class="text-muted">{{ $comment->created_at->diffForHumans() }}</small>
-                        </div>
-                    @endforeach
-                @else
+                @foreach($news->comments as $comment)
+                    <div class="mb-3">
+                        <strong>{{ $comment->user->name }}</strong>
+                        <p class="mb-1">{{ $comment->content }}</p>
+                        <small class="text-muted">{{ $comment->created_at->diffForHumans() }}</small>
+                    </div>
+                @endforeach
+                @if($news->comments->count() == 0)
                     <p class="text-muted">Belum ada komentar.</p>
-                @endif --}}
+                @endif
             </div>
+
+            <!-- Tombol Edit dan Hapus (Hanya untuk Admin) -->
+            @if(Auth::check() && Auth::user()->admin == 1) 
+                <div class="text-center mt-4">
+                    <a href="{{ route('pages.admin.news.edit', $news->id) }}" class="btn btn-warning">Edit</a>
+                    <form action="{{ route('pages.admin.news.destroy', $news->id) }}" method="POST" class="d-inline">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus berita ini?')">Hapus</button>
+                    </form>
+                </div>
+            @endif
 
             <!-- Tombol Kembali -->
             <div class="text-center mt-4">
