@@ -1,38 +1,5 @@
 @extends('layouts.landing-page.app')
 @section('content')
-<body class="index-page">
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container">
-      <div class="row">
-        <!-- data-aos-delay="200" -->
-        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
-          data-aos="fade-up" data-aos-delay="200">
-          <h1>
-          Smk Al Azhar
-          </h1>
-          <p >
-            <h2 style="color: white;">Selamat Datang di SMK Al Ahzar Sempu.  
-              Tetap terinformasi dengan berita terbaru kami, termasuk prestasi siswa, kegiatan ekstrakurikuler, dan program unggulan sekolah.  
-              Kami berkomitmen untuk terus mendukung perkembangan pendidikan dan membentuk generasi terbaik masa depan.  
-              <br>  
-          </h2>
-          </p>
-          <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="daftar-seko/daftar.html" class="btn-get-started scrollto">Daftar</a>
-            <!-- <a href="https://github.com/faizinuha/WebSchool.git" class=" btn-watch-video" target="_blank"><i
-                class="bi bi-github"></i><span>Github</span></a> -->
-          </div>
-        </div>
-        <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="200">
-          <img src="landing-pages/news.png" class="img-fluid animated" alt="">
-          <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnNUepEc401x16udZXJc_U2wAm25pP5h_B4w&s" class="img-fluid animated w-70" alt=""> -->
-        </div>
-      </div>
-    </div>
-
-  </section><!-- End Hero -->
-  <main id="main">
     <!-- ======= Clients Section ======= -->
     
 <section id="clients" class="clients">
@@ -366,70 +333,7 @@
     <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p>JIKA ADA PERTANYA LAIN KALIAN BISA DATANG AJA / KALIAN BISA CHAT KAMI DI BAWAH</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt" title="Call Me"></i>
-                <h4>Location:</h4>
-                <p>Jl. Imam Syafi'i No.45, Tugung, Sempu,
-                  Kec. Sempu, Kabupaten Banyuwangi,
-                  Jawa Timur 68468
-                </p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>smkalazhar.sempubwi@gmail.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>++62 852 3655 3650</p>
-              </div>
-
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d761.0781328051505!2d114.1374522405405!3d-8.30428163607927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6acb17e63e19d%3A0xf0a7e21e4fcadf5f!2sSMK%20AL-AZHAR%20SEMPU!5e0!3m2!1sid!2sid!4v1713251117857!5m2!1sid!2sid"
-                width="100%" height="450" style="border:0;" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-
-          </div>
-
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="#" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="email">Your Email</label> <!-- Mengganti for="name" menjadi for="email" -->
-                  <input type="email" class="form-control" name="email" id="email" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="subject">Subject</label> <!-- Mengganti for="name" menjadi for="subject" -->
-                <input type="text" class="form-control" name="subject" id="subject" required>
-              </div>
-
-              <div class="text-center"><button type="submit" onclick="buka()">Send Message</button></div>
-            </form>
-          </div>
-
-
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
-
+       
 
     <!-- <div class="my-3">
       <div class="loading">Loading</div>

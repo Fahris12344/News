@@ -15,7 +15,7 @@
                 <a href="/" class="nav-item nav-link {{ request()->is('/') ? 'active' : '' }}">Home</a>
                 <a href="/about" class="nav-item nav-link {{ request()->is('profile') ? 'active' : '' }}">Profile</a>
                 <a href="/contact" class="nav-item nav-link {{ request()->is('contact') ? 'active' : '' }}">Contact</a>
-                <a href="/contact" class="nav-item nav-link {{ request()->is('alumni') ? 'active' : '' }}">Alumni</a>
+                <a href="/profile-school" class="nav-item nav-link {{ request()->is('alumni') ? 'active' : '' }}">Alumni</a>
             </div>
             
                 @if (Auth::check())

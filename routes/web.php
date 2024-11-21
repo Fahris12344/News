@@ -43,7 +43,7 @@ require __DIR__ . '/auth.php';
 
 
 Route::get('/profile-school', function () {
-    return view('profile');
+    return view('pages.profile.index');
 });
 
 Route::get('/news', function () {
