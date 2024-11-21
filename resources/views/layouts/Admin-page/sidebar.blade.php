@@ -14,7 +14,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="/admin/dashboard">
         <i class="bi bi-window-desktop"></i>
             <span>Dashboard</span></a>
     </li>
