@@ -63,7 +63,7 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link" href="/admin/announcements">
+        <a class="nav-link" href="{{route('pages.admin.announcement.index')}}">
             <i class="fa fa-user-circle"></i>
             <span>Pengumuman</span>
         </a>
