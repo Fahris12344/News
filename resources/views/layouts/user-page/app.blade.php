@@ -61,6 +61,8 @@ aria-labelledby="userDropdown">
 
  @yield('content')
 
+ 
+
         @include('layouts.user-page.footer')
         <!-- Features Start -->
 

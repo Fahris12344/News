@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Storage;
 class AnnouncementController extends Controller
 {
     // Tampilkan daftar pengumuman
-    public function announcement()
+    public function index()
     {
         $announcements = Announcement::latest()->paginate(10);
         return view('pages.admin.announcement.index', compact('announcements'));
@@ -17,7 +17,7 @@ class AnnouncementController extends Controller
     // Tampilkan form untuk menambahkan pengumuman baru
     public function createAnnouncement()
     {
-        return view('pages.admin.announcement..create');
+        return view('pages.admin.announcement.create');
     }
 
     // Simpan pengumuman baru ke database

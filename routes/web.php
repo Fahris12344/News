@@ -37,13 +37,13 @@ Route::middleware('auth')->group(function () {
         Route::delete('/news/{id}', [AdminController::class, 'destroyNews'])->name('pages.admin.news.destroy');
 
 
-        Route::get('/announcement', [AnnouncementController::class, 'announcement'])->name('pages.announcement.announcement.index');
-        Route::get('/announcement/create', [AnnouncementController::class, 'createAnnouncement'])->name('pages.announcement.announcement.create');
-        Route::post('/announcement', [AnnouncementController::class, 'storeAnnouncement'])->name('pages.announcement.announcement.store');
-        Route::get('/announcement/{id}/edit', [AnnouncementController::class, 'editAnnouncement'])->name('pages.announcement.announcement.edit');
-        Route::get('/announcement/{id}/show', [AnnouncementController::class, 'showAnnouncement'])->name('pages.announcement.announcement.show');
-        Route::put('/announcement/{id}', [AnnouncementController::class, 'updateAnnouncement'])->name('pages.announcement.announcement.update');
-        Route::delete('/announcement/{id}', [AnnouncementController::class, 'destroyAnnouncement'])->name('pages.admin.announcement.destroy');
+           // Announcement Routes
+           Route::get('/announcement', [AdminController::class, 'announcement'])->name('pages.admin.announcement.index');
+           Route::get('/announcement/create', [AdminController::class, 'createAnnouncement'])->name('pages.admin.announcement.create');
+           Route::post('/announcement', [AdminController::class, 'storeAnnouncement'])->name('pages.admin.announcement.store');
+           Route::get('/announcement/{id}/edit', [AdminController::class, 'editAnnouncement'])->name('pages.admin.announcement.edit');
+           Route::put('/announcement/{id}', [AdminController::class, 'updateAnnouncement'])->name('pages.admin.announcement.update');
+           Route::delete('/announcement/{id}', [AdminController::class, 'destroyAnnouncement'])->name('pages.admin.announcement.destroy');
     });
 
 
@@ -52,6 +52,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::post('/profile/upload', [ProfileController::class, 'uploadImage'])->name('profile.upload');
 });
 
 require __DIR__ . '/auth.php';
@@ -76,5 +77,5 @@ Route::get('/alumni', function () {
 //     return view('pages.admin.dashboard');
 // });
 
-Route::get('/dashboard', [DashboardController::class, 'indexManual'])->name('dashboard');
-Route::get('/dashboard/detail',[ DashboardController::class, 'detail'])->name('dashboard/detail');
+Route::get('/berita', [DashboardController::class, 'indexManual'])->name('dashboard');
+Route::get('/pengumuman',[ DashboardController::class, 'announcement'])->name('announcement');

@@ -44,7 +44,8 @@
                                         </div>
                                         <div>
                                             <h4>Alamat</h4>
-                                            <p class="mb-0">123 Street New York.USA</p>
+                                            <p class="mb-0">Jl. Imam Syafi'i No.45, Tugung, Kec. Sempu, Kabupaten Banyuwangi, Jawa Timur 
+                                                <br> Kode pos : 68468</p>
                                         </div>
                                     </div>
                                 </div>
@@ -55,7 +56,7 @@
                                         </div>
                                         <div>
                                             <h4>Email</h4>
-                                            <p class="mb-0">info@example.com</p>
+                                            <p class="mb-0">smkalazhar.sempubwi@gmail.com</p>
                                         </div>
                                     </div>
                                 </div>
@@ -66,7 +67,7 @@
                                         </div>
                                         <div>
                                             <h4>Phone</h4>
-                                            <p class="mb-0">(+012) 3456 7890</p>
+                                            <p class="mb-0">+62 852 3655 3650</p>
                                         </div>
                                     </div>
                                 </div>
@@ -77,7 +78,7 @@
                                         </div>
                                         <div>
                                             <h4>Yoursite@ex.com</h4>
-                                            <p class="mb-0">(+012) 3456 7890</p>
+                                            <p class="mb-0">(+012) 3456 </p>
                                         </div>
                                     </div>
                                 </div>

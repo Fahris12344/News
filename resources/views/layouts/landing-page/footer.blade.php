@@ -38,7 +38,8 @@
                   <h4 class="text-white mb-4">Informasi Kontak</h4>
                   <div class="d-flex align-items-center me-3">
                       <i class="fas fa-map-marker-alt text-primary me-3"></i>
-                      <p class="text-white mb-0">Jl. Imam Syafi'i No.45, Tugung, Sempu, Kec. Sempu, Kabupaten Banyuwangi, Jawa Timur 68468</p>
+                      <p class="text-white mb-0">Jl. Imam Syafi'i No.45, Tugung, Kec. Sempu, Kabupaten Banyuwangi, Jawa Timur 
+                        <br> Kode pos : 68468</p>
                   </div>
                   <div class="d-flex align-items-center">
                       <i class="fas fa-envelope text-primary me-3"></i>

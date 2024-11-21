@@ -42,7 +42,7 @@ class DashboardController extends Controller
         return view('dashboard', compact('totalBerita', 'totalKategori', 'totalPengumuman', 'beritaTerbaru'));
     }
 
-    public function detail()
+    public function announcement()
     {
         return view('detail');
     }

@@ -191,10 +191,9 @@
                                <img src="assets/img/layanan-4.png" alt="Vektor Agenda Kegiatan" class="img-fluid"
                                    style="width: 100px;">
                            </div>
-                           <h4 class="text-primary mb-3">Agenda Kegiatan</h4>
+                           <h4 class="text-primary mb-3">Pengumuman</h4>
                            <p class="mb-3">
-                               Pantau jadwal acara sekolah seperti lomba, seminar, dan hari penting lainnya agar tidak
-                               ketinggalan momen istimewa.
+                               Dapatkan pengumuman sekolah terbaru seperti job fair, bazar, libur, dan pengumuman penting lainnya secara langsung.
                            </p>
                        </div>
                    </div>

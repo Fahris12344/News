@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\News;
 use App\Models\User;
 use App\Models\Commentar;
+use App\Models\Announcement;
 use App\Models\like;
 
 use Illuminate\Http\Request;
@@ -335,5 +336,57 @@ class AdminController extends Controller
     {
         $user->update(['role' => 'admin']);
         return redirect()->back()->with('success', 'Role pengguna berhasil diubah menjadi admin.');
+    }
+
+    public function announcement()
+    {
+        $announcements = Announcement::all(); // Fetch all announcements
+        return view('pages.admin.announcement.index', compact('announcements'));
+    }
+
+    public function createAnnouncement()
+    {
+        return view('pages.admin.announcement.create');
+    }
+
+    public function storeAnnouncement(Request $request)
+    {
+        $validated = $request->validate([
+            'title' => 'required|string|max:255',
+            'content' => 'required|string',
+            // Add any validation rules
+        ]);
+
+        Announcement::create($validated);
+
+        return redirect()->route('pages.admin.announcement.index')->with('success', 'Announcement created successfully');
+    }
+
+    public function editAnnouncement($id)
+    {
+        $announcement = Announcement::findOrFail($id);
+        return view('pages.admin.announcement.edit', compact('announcement'));
+    }
+
+    public function updateAnnouncement(Request $request, $id)
+    {
+        $announcement = Announcement::findOrFail($id);
+
+        $validated = $request->validate([
+            'title' => 'required|string|max:255',
+            'content' => 'required|string',
+        ]);
+
+        $announcement->update($validated);
+
+        return redirect()->route('pages.admin.announcement.index')->with('success', 'Announcement updated successfully');
+    }
+
+    public function destroyAnnouncement($id)
+    {
+        $announcement = Announcement::findOrFail($id);
+        $announcement->delete();
+
+        return redirect()->route('pages.admin.announcement.index')->with('success', 'Announcement deleted successfully');
     }
 }
