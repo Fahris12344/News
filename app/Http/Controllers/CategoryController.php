@@ -17,7 +17,7 @@ class CategoryController extends Controller
     // Menampilkan form untuk menambahkan kategori baru
     public function create()
     {
-        return view('kategori.index');
+        return view('pages.admin.category.create');
     }
 
     // Menyimpan kategori baru ke database

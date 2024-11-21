@@ -9,6 +9,7 @@ use App\Models\Category;
 
 class NewsController extends Controller
 {
+    
     // Menampilkan daftar berita dengan pencarian dan filter
     public function index(Request $request)
     {

@@ -1,8 +1,16 @@
 @extends('layouts.Admin-page.app')
 
 @section('content')
-<div class="container-fluid py-4">
-    <h1 class="text-center">Daftar Berita</h1>
+<style>
+    .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+</style>
+<div class="container-fluid py-12">
+    <h1 class="text-center mt-auto">Daftar Berita</h1>
 
     <!-- Alert Success -->
     @if(session('success'))
@@ -40,30 +48,41 @@
     </form>
 
     <!-- Tombol Tambah Berita -->
-    <div class="d-flex justify-content-center mb-3">
+    <div class="d-flex justify-content-center mb-4">
         <a href="{{ route('pages.admin.news.create') }}" class="btn btn-success">Tambah Berita</a>
     </div>
 
     <!-- Card Layout untuk Daftar Berita -->
-    <div class="row justify-content-center">
+    <div class="row">
         @forelse($news as $item)
-            <div class="col-md-4 col-lg-3 mb-4">
-                <div class="card h-100">
-                    @if($item->image)
-                        <img src="{{ asset('storage/' . $item->image) }}" class="card-img-top" alt="{{ $item->title }}" style="height: 200px; object-fit: cover;">
-                    @else
-                        <img src="{{ asset('images/placeholder.png') }}" class="card-img-top" alt="No Image">
-                    @endif
-                    <div class="card-body">
-                        <h5 class="card-title text-center">{{ $item->title }}</h5>
-                        <p class="card-text text-muted">Kategori: {{ $item->category->name ?? 'Tidak ada kategori' }}</p>
-                        <p class="card-text">{{ Str::limit($item->content, 100) }}</p>
-                        <div class="text-center">
-                            <a href="{{ route('pages.admin.news.show', $item->id) }}" class="btn btn-primary btn-sm">Lihat Detail</a>
-                        </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="card shadow-sm border-0 h-100" style="border-radius: 15px; overflow: hidden;">
+                    <!-- Gambar Admin -->
+                    <div class="card-header bg-white text-center" style="border-bottom: 1px solid #f0f0f0;">
+                        <img 
+                            src="{{ asset('storage/' . optional($item->admin)->profile_picture) ?? asset('images/admin-placeholder.png') }}" 
+                            class="rounded-circle border" 
+                            alt="Admin Avatar" 
+                            style="width: 60px; height: 60px; object-fit: cover;">
                     </div>
-                    <div class="card-footer text-muted text-center">
-                        Tanggal: {{ $item->start_date }} - {{ $item->end_date }}
+                    
+                    <!-- Gambar Berita -->
+                    @if($item->image)
+                        <img src="{{ asset('storage/' . $item->image) }}" class="card-img-top" alt="{{ $item->title }}" style="height: 180px; object-fit: cover;">
+                    @else
+                        <img src="{{ asset('images/placeholder.png') }}" class="card-img-top" alt="No Image" style="height: 180px; object-fit: cover;">
+                    @endif
+
+                    <!-- Konten Berita -->
+                    <div class="card-body p-4 d-flex flex-column">
+                        <h5 class="card-title mb-2 text-center font-weight-bold">{{ $item->title }}</h5>
+                        <p class="card-text text-muted text-center small mb-3">{{ $item->category->name ?? 'Tidak ada kategori' }}</p>
+                        <p class="card-text text-muted text-truncate" style="max-width: 100%;">{{ $item->content }}</p>
+                    </div>
+
+                    <!-- Footer Card -->
+                    <div class="card-footer bg-white text-center py-3">
+                        <a href="{{ route('pages.admin.news.show', $item->id) }}" class="btn btn-primary btn-sm">Lihat Detail</a>
                     </div>
                 </div>
             </div>
