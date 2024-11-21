@@ -15,7 +15,7 @@
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
         <a class="nav-link" href="index.html">
-        <i class="bi bi-newspaper"></i>
+        <i class="bi bi-window-desktop"></i>
             <span>Dashboard</span></a>
     </li>
 
@@ -30,7 +30,7 @@
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link" href="/admin/news">
-            <i class="fas fa-fw fa-cog"></i>
+        <i class="bi bi-newspaper"></i>
             <span>Berita</span>
         </a>
        
