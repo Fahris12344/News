@@ -166,7 +166,7 @@
                            <h4 class="text-primary mb-3">Berita Terkini</h4>
                            <p class="mb-3">
                                Dapatkan berita terbaru tentang prestasi siswa, kegiatan sekolah, dan informasi penting
-                               lainnya langsung dari sumber terpercaya.
+                               lainnya.
                            </p>
                        </div>
                    </div>
