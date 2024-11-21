@@ -5,7 +5,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>News user</title>
+    <title>Berita</title>
+    <link rel="icon" href="{{asset('foto/download.png')}}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- plugins:css -->
     <link rel="stylesheet" href="{{ asset('assets-user/vendors/feather/feather.css') }}">
@@ -21,13 +22,6 @@
     <link rel="stylesheet" href="{{ asset('assets-user/css/vertical-layout-light/style.css') }}">
     <!-- endinject -->
     <link rel="shortcut icon" href="{{ asset('assets-user/images/favicon.png') }}" />
-
-    <!-- Custom CSS for Sidebar -->
-    <style>
-        .sidebar {
-            position: fixed; 
-        }
-    </style>
 </head>
 
 <body>
