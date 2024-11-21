@@ -60,17 +60,17 @@
       @if (Auth::user()->role == 'admin')
           <!-- Admin bisa ke admin dashboard atau dashboard biasa -->
           <a href="/admin/dashboard"
-              class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0 mx-2">Lihat Berita (Admin)</a>
-          <a href="/dashboard"
-              class="btn btn-outline-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0 mx-2">Lihat Berita (User)</a>
+              class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0 mx-2">Dashboard Admin</a>
+          <a href="/berita"
+              class="btn btn-outline-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0 mx-2">Lihat Seluruh Berita</a>
       @else
           <!-- User biasa -->
-          <a href="/dashboard"
+          <a href="/berita"
               class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0 mx-2">Lihat Seluruh Berita</a>
       @endif
   @else
       <!-- Jika belum login -->
-      <a href="/login"
+      <a href="/berita"
           class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0 mx-2">Lihat Seluruh Berita</a>
   @endif
   
