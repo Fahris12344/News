@@ -36,14 +36,14 @@ Route::middleware('auth')->group(function () {
         Route::put('/news/{id}', [AdminController::class, 'updateNews'])->name('pages.admin.news.update');
         Route::delete('/news/{id}', [AdminController::class, 'destroyNews'])->name('pages.admin.news.destroy');
 
-
-        Route::get('/announcement', [AnnouncementController::class, 'announcement'])->name('pages.announcement.announcement.index');
-        Route::get('/announcement/create', [AnnouncementController::class, 'createAnnouncement'])->name('pages.announcement.announcement.create');
-        Route::post('/announcement', [AnnouncementController::class, 'storeAnnouncement'])->name('pages.announcement.announcement.store');
-        Route::get('/announcement/{id}/edit', [AnnouncementController::class, 'editAnnouncement'])->name('pages.announcement.announcement.edit');
-        Route::get('/announcement/{id}/show', [AnnouncementController::class, 'showAnnouncement'])->name('pages.announcement.announcement.show');
-        Route::put('/announcement/{id}', [AnnouncementController::class, 'updateAnnouncement'])->name('pages.announcement.announcement.update');
-        Route::delete('/announcement/{id}', [AnnouncementController::class, 'destroyAnnouncement'])->name('pages.admin.announcement.destroy');
+        Route::get('/announcement', [AdminController::class, 'announcement'])->name('pages.admin.announcement.index');
+        Route::get('/announcement/create', [AdminController::class, 'createAnnouncement'])->name('pages.admin.announcement.create');
+        Route::post('/announcement', [AdminController::class, 'storeAnnouncement'])->name('pages.admin.announcement.store');
+        Route::get('/announcement/{id}/edit', [AdminController::class, 'editAnnouncement'])->name('pages.admin.announcement.edit');
+        Route::get('/announcement/{id}/show', [AdminController::class, 'showAnnouncement'])->name('pages.admin.announcement.show');
+        Route::put('/announcement/{id}', [AdminController::class, 'updateAnnouncement'])->name('pages.admin.announcement.update');
+        Route::delete('/announcement/{id}', [AdminController::class, 'destroyAnnouncement'])->name('pages.admin.announcement.destroy');
+        
     });
 
 
