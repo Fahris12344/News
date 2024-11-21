@@ -38,6 +38,29 @@
                 </div>
             </div>
 
+            <!-- Like dan Dislike dengan Jumlah -->
+            <div class="d-flex justify-content-start mb-4">
+                <div class="d-inline mx-2">
+                    <form action="{{ route('news.like', $news->id) }}" method="POST" class="d-inline">
+                        @csrf
+                        <button type="submit" class="btn btn-success">
+                            <i class="fas fa-thumbs-up"></i> <!-- Like Icon -->
+                        </button>
+                    </form>
+                    <span> 1 </span>
+                </div>
+
+                <div class="d-inline mx-2">
+                    <form action="{{ route('news.dislike', $news->id) }}" method="POST" class="d-inline">
+                        @csrf
+                        <button type="submit" class="btn btn-danger">
+                            <i class="fas fa-thumbs-down"></i> <!-- Dislike Icon -->
+                        </button>
+                    </form>
+                    <span> 2 </span>
+                </div>
+            </div>
+
             <!-- Komentar: Cek apakah pengguna sudah login -->
             @if(auth()->check())
             <div class="mb-4">
@@ -54,6 +77,20 @@
                 Anda harus <a href="{{ route('login') }}">login</a> untuk mengirim komentar.
             </div>
             @endif
+
+            <!-- Daftar Komentar -->
+            <div class="mb-4">
+                <h5><strong>Daftar Komentar:</strong></h5>
+                @forelse($news->comments as $comment)
+                    <div class="mb-3">
+                        <strong>{{ $comment->user->name }}</strong>
+                        <p>{{ $comment->content }}</p>
+                        <small class="text-muted">{{ $comment->created_at->diffForHumans() }}</small>
+                    </div>
+                @empty
+                    <p class="text-muted">Belum ada komentar.</p>
+                @endforelse
+            </div>
 
             <!-- Tombol Aksi -->
             <div class="text-center">
