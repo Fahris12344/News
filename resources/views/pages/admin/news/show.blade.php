@@ -33,21 +33,26 @@
                 </div>
             </div>
 
-            <!-- Tombol Like dan Dislike -->
+            <!-- Tombol Like dan Dislike (Icons) -->
             <div class="text-center mt-4">
                 @if(Auth::check())
+                    <!-- Like Button with Icon -->
                     <form action="{{ route('news.like', $news->id) }}" method="POST" class="d-inline">
                         @csrf
                         <button type="submit" class="btn btn-success">
-                            Like 
+                            <i class="fas fa-thumbs-up"></i> <!-- Like Icon -->
                         </button>
                     </form>
+                    <span>Likes</span>
+                    
+                    <!-- Dislike Button with Icon -->
                     <form action="{{ route('news.dislike', $news->id) }}" method="POST" class="d-inline">
                         @csrf
                         <button type="submit" class="btn btn-danger">
-                            Dislike 
+                            <i class="fas fa-thumbs-down"></i> <!-- Dislike Icon -->
                         </button>
                     </form>
+                    <span> Dislikes</span>
                 @else
                     <p class="text-muted">Login untuk menyukai atau tidak menyukai berita.</p>
                 @endif
@@ -88,7 +93,7 @@
             </div>
 
             <!-- Tombol Edit dan Hapus (Hanya untuk Admin) -->
-            @if(Auth::check() && Auth::user()->admin == 1) 
+            @if(Auth::check() && Auth::user()->role === 'admin') 
                 <div class="text-center mt-4">
                     <a href="{{ route('pages.admin.news.edit', $news->id) }}" class="btn btn-warning">Edit</a>
                     <form action="{{ route('pages.admin.news.destroy', $news->id) }}" method="POST" class="d-inline">
