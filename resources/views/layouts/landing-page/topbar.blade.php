@@ -19,37 +19,24 @@
                 <a href="/alumni" class="nav-item nav-link {{ request()->is('alumni') ? 'active' : '' }}">Alumni</a>
             </div>
             
-                @if (Auth::check())
-                      <div class="dropdown d-inline">
-                          <!-- Dropdown untuk Dashboard dan Logout -->
-                          <a href="#"
-                              class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0"
-                              data-bs-toggle="dropdown" aria-expanded="false">
-                              Lihat Berita
-                          </a>
-                          <ul class="dropdown-menu dropdown-menu-end">
-                              @if (Auth::user()->role == 'admin')
-                                  <li><a href="{{ route('pages.admin.dashboard') }}" class="dropdown-item"><i
-                                              class="fa fa-tachometer-alt me-2"></i> Admin Dashboard</a></li>
-                              @elseif (Auth::user()->role == 'user')
-                                  <li><a href="#" class="dropdown-item"><i
-                                              class="fa fa-user me-2"></i> User Dashboard</a></li>
-                              @endif
-                              <li>
-                                  <form action="{{ route('logout') }}" method="POST" class="d-inline">
-                                      @csrf
-                                      <button type="submit" class="dropdown-item text-danger">
-                                          <i class="fa fa-sign-out-alt me-2"></i>Logout
-                                      </button>
-                                  </form>
-                              </li>
-                          </ul>
-                      </div>
-                  @else
-                      <!-- Tombol Get Started jika belum login -->
-                      <a href="{{ route('login') }}"
-                          class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">Bergabung Segera</a>
-                  @endif
+            @if (Auth::check())
+            @if (Auth::user()->role == 'admin')
+                <!-- Admin bisa ke admin dashboard atau dashboard biasa -->
+                <a href="/admin/dashboard"
+                    class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">Lihat Berita (Admin)</a>
+                <a href="/dashboard"
+                    class="btn btn-outline-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">Lihat Berita (User)</a>
+            @else
+                <!-- User biasa -->
+                <a href="/dashboard"
+                    class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">Lihat Seluruh Berita</a>
+            @endif
+        @else
+            <!-- Jika belum login -->
+            <a href="/login"
+                class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">Lihat Seluruh Berita</a>
+        @endif
+        
               </div>
           </nav>
           <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

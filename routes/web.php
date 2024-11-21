@@ -75,3 +75,6 @@ Route::get('/alumni', function () {
 // Route::get('/admin/dashboard', function () {
 //     return view('pages.admin.dashboard');
 // });
+
+Route::get('/dashboard', [DashboardController::class, 'indexManual'])->name('dashboard');
+Route::get('/dashboard/detail',[ DashboardController::class, 'detail'])->name('dashboard/detail');
