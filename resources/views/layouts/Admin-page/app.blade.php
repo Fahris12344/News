@@ -42,7 +42,7 @@
     <div class="container-fluid page-body-wrapper">
         <!-- Sidebar -->
         <div class="sidebar">
-            @include('layouts.Admin-page.sidebar') <!-- Include sidebar -->
+            @include('layouts.Admin-page.sidebar')
         </div>
 
         <!-- Konten Utama -->

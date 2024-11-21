@@ -42,7 +42,7 @@ class NewsController extends Controller
         // Mengambil daftar kategori untuk filter
         $categories = Category::all();
 
-        return view('news.index', compact('news', 'categories'));
+        return view('pages.admin.news.index', compact('news', 'categories'));
     }
 
     // Menampilkan form untuk membuat berita baru

@@ -1,4 +1,6 @@
 <!-- partial:partials/_sidebar.html -->
+ <div class="layout">
+    <aside class="sidebar">
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
   <ul class="nav">
       <li class="nav-item">
@@ -33,3 +35,5 @@
       </li>
   </ul>
 </nav>
+</aside>
+ </div>
