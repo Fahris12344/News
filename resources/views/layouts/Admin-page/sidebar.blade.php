@@ -39,7 +39,7 @@
 
     <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
-    <a class="nav-link" href="{{route('kategori.index')}}">
+    <a class="nav-link" href="/pages/admin/category/index">
     <i class="bi bi-tag"></i>
             <span>Kategori</span>
         </a>
@@ -47,7 +47,7 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-    <a class="nav-link" href="/admin/announcement">
+    <a class="nav-link" href="/admin/announcements">
     <i class="bi bi-megaphone"></i>
             <span>Pengumuman</span>
         </a>

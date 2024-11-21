@@ -34,9 +34,9 @@
             <td>{{$index +1 }}</td>
             <td>{{ $category->name }}</td>
             <td>
-            <a href="{{ route('kategori.edit', $category->id) }}"
+            <a href="{{ route('pages.admin.category.edit', $category->id) }}"
               class="btn btn-warning btn-sm">Edit</a>
-            <form action="{{ route('kategori.destroy', $category->id) }}" method="POST"
+            <form action="{{ route('pages.admin.category.destroy', $category->id) }}" method="POST"
               style="display:inline;">
               @csrf
               @method('DELETE')
