@@ -37,15 +37,15 @@ Route::middleware('auth')->group(function () {
         Route::delete('/news/{id}', [AdminController::class, 'destroyNews'])->name('pages.admin.news.destroy');
 
 
-           // Announcement Routes
-           
-        });
-        Route::get('/announcement', [AnnouncementController::class, 'announcement'])->name('pages.admin.announcement.index');
+        // Announcement Routes
+        // web php
+        Route::get('/announcement', [AnnouncementController::class, 'index'])->name('pages.admin.announcement.index');
         Route::get('/announcement/create', [AnnouncementController::class, 'create'])->name('pages.admin.announcement.create');
         Route::post('/announcement', [AnnouncementController::class, 'store'])->name('pages.admin.announcement.store');
         Route::get('/announcement/{id}/edit', [AnnouncementController::class, 'edit'])->name('pages.admin.announcement.edit');
         Route::put('/announcement/{id}', [AnnouncementController::class, 'update'])->name('pages.admin.announcement.update');
         Route::delete('/announcement/{id}', [AnnouncementController::class, 'destroy'])->name('pages.admin.announcement.destroy');
+    });
 
 
 
@@ -79,4 +79,4 @@ Route::get('/alumni', function () {
 // });
 
 Route::get('/berita', [DashboardController::class, 'indexManual'])->name('dashboard');
-Route::get('/pengumuman',[ DashboardController::class, 'announcement'])->name('announcement');
+Route::get('/pengumuman', [DashboardController::class, 'announcement'])->name('announcement');

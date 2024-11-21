@@ -10,7 +10,7 @@ class Announcement extends Model
 
     protected $fillable = [
         'title',
-        'descrition',
+        'description', // Perbaikan ejaan dari 'descrition' ke 'description'
         'image',
         'date',
     ];
