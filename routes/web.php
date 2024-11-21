@@ -48,6 +48,9 @@ Route::get('/news', function () {
 
 Route::get('/contact', function () {
     return view('pages.contact.index');
+
+});Route::get('/alumni', function () {
+    return view('pages.alumni.index');
 });
 // //admin
 // Route::get('/admin/dashboard', function () {
