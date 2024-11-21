@@ -1,6 +1,11 @@
 @extends('layouts.landing-page.app')
 
 @section('content')
+    <style>
+        .font-jakarta {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
     <!-- Spinner Start -->
     <div id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -11,8 +16,13 @@
     <!-- Header Start -->
     <div class="container-fluid bg-breadcrumb">
         <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Contact Us</h4>
+            <h4 class="text-white display-4 mb-4 wow fadeInDown font-jakarta" data-wow-delay="0.1s">HUBUNGI KAMI</h4>
+            <p class="text-white wow fadeInUp" data-wow-delay="0.2s">
+                Jika Anda memiliki pertanyaan atau membutuhkan informasi lebih lanjut, jangan ragu untuk menghubungi kami.
+                Kami siap membantu Anda.
+            </p>
         </div>
+
     </div>
     <!-- Header End -->
     </div>
@@ -132,8 +142,10 @@
                 </div>
                 <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
                     <div class="rounded h-100 ">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3947.9845839803234!2d114.13522647501054!3d-8.304329991730894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6acb17e63e19d%3A0xf0a7e21e4fcadf5f!2sSMK%20AL-AZHAR%20SEMPU!5e0!3m2!1sid!2sid!4v1732153503768!5m2!1sid!2sid" 
-                        width="600" height="800" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3947.9845839803234!2d114.13522647501054!3d-8.304329991730894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6acb17e63e19d%3A0xf0a7e21e4fcadf5f!2sSMK%20AL-AZHAR%20SEMPU!5e0!3m2!1sid!2sid!4v1732153503768!5m2!1sid!2sid"
+                            width="600" height="800" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>

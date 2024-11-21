@@ -128,15 +128,6 @@
                                    <a href="#" class="btn btn-primary rounded-pill py-3 px-5 flex-shrink-0">Pelajari
                                        Lebih Lanjut</a>
                                </div>
-                               <div class="col-sm-6">
-                                   <div class="d-flex">
-                                       <i class="fas fa-phone-alt fa-2x text-primary me-4"></i>
-                                       <div>
-                                           <h4>Hubungi Kami</h4>
-                                           <p class="mb-0 fs-5" style="letter-spacing: 1px;">+6281234567890</p>
-                                       </div>
-                                   </div>
-                               </div>
                            </div>
                        </div>
                    </div>
@@ -157,7 +148,7 @@
            <div class="container pb-5">
                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                    <h4 class="text-primary">Layanan Kami</h4>
-                   <h1 class="display-5 mb-4">Informasi Terbaik untuk Komunitas Sekolah</h1>
+                   <h1 class="display-6 mb-4 font-jakarta">Informasi Terbaik untuk Komunitas Sekolah</h1>
                    <p class="mb-0">
                        Selamat datang di web berita sekolah kami! Kami menyediakan informasi terkini tentang kegiatan,
                        acara, dan pengumuman penting di lingkungan sekolah. Dengan desain modern dan navigasi yang mudah,
@@ -242,7 +233,7 @@
            <div class="container pb-5">
                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                    <h4 class="text-primary">Jurusan SMK Alazhar</h4>
-                   <h1 class="display-5 mb-4">Menghubungkan ilmu, kreativitas, dan peluang untuk masa depan yang cerah.
+                   <h1 class="display-6 mb-4 font-jakarta">Menghubungkan ilmu, kreativitas, dan peluang untuk masa depan yang cerah.
                    </h1>
                    <p class="mb-0">Di SMK Alazhar, kami memberikan pendidikan berkualitas dengan fokus pada keterampilan
                        praktis dan siap menghadapi tantangan dunia industri.</p>
@@ -321,7 +312,7 @@
            <div class="container pb-5">
                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                    <h4 class="text-primary">Berita SMK Al Azhaar</h4>
-                   <h1 class="display-5 mb-4">Informasi Terbaru dari SMK Al Azhaar</h1>
+                   <h1 class="display-6 mb-4  font-jakarta">Informasi Terbaru dari SMK Al-Azhar</h1>
                    <p class="mb-0">Selamat datang di portal berita SMK Al Azhaar. Dapatkan informasi terkini mengenai
                        kegiatan, prestasi, dan acara yang berlangsung di sekolah kami.
                    </p>

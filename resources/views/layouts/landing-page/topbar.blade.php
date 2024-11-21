@@ -4,8 +4,9 @@
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
             <a href="" class="navbar-brand p-0">
-                <h1 class="text-primary"><img src="{{asset('Logo/logo-smk-putih.png')}}" alt="Logo"></h1>
-                 
+              <h1 class="text-primary">
+                <img src="{{asset('Logo/logo-smk-putih.png')}}" alt="Logo" style="width: 300px; height: auto;">
+            </h1>            
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -13,7 +14,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
               <div class="navbar-nav ms-auto py-0">
                 <a href="/" class="nav-item nav-link {{ request()->is('/') ? 'active' : '' }}">Home</a>
-                <a href="/profile-school" class="nav-item nav-link {{ request()->is('profile') ? 'active' : '' }}">Profile</a>
+                <a href="/profile-school" class="nav-item nav-link {{ request()->is('profile-school') ? 'active' : '' }}">Profile</a>
                 <a href="/contact" class="nav-item nav-link {{ request()->is('contact') ? 'active' : '' }}">Contact</a>
                 <a href="/alumni" class="nav-item nav-link {{ request()->is('alumni') ? 'active' : '' }}">Alumni</a>
             </div>
