@@ -13,17 +13,18 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
               <div class="navbar-nav ms-auto py-0">
                 <a href="/" class="nav-item nav-link {{ request()->is('/') ? 'active' : '' }}">Home</a>
-                <a href="/about" class="nav-item nav-link {{ request()->is('about') ? 'active' : '' }}">Dashboard</a>
+                <a href="/profile-school" class="nav-item nav-link {{ request()->is('profile') ? 'active' : '' }}">Profile</a>
                 <a href="/contact" class="nav-item nav-link {{ request()->is('contact') ? 'active' : '' }}">Contact</a>
+                <a href="/profile-school" class="nav-item nav-link {{ request()->is('alumni') ? 'active' : '' }}">Alumni</a>
             </div>
             
                 @if (Auth::check())
                       <div class="dropdown d-inline">
                           <!-- Dropdown untuk Dashboard dan Logout -->
                           <a href="#"
-                              class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0 dropdown-toggle"
+                              class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0"
                               data-bs-toggle="dropdown" aria-expanded="false">
-                              Dashboard <i class="fas fa-caret-down"></i>
+                              Lihat Berita
                           </a>
                           <ul class="dropdown-menu dropdown-menu-end">
                               @if (Auth::user()->role == 'admin')

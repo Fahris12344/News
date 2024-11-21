@@ -1,233 +1,95 @@
 @extends('layouts.Admin-page.app')
-@section('content')
-    <style>
-        /* Ensure the sidebar has a fixed position */
-        .main-panel {
-            margin-left: 250px;
-            /* Adjust this to match the width of the sidebar */
-            padding: 20px;
-            /* Add padding to give space around the content */
-            min-height: 100vh;
-            /* Ensure the main panel takes full height */
-            box-sizing: border-box;
-        }
+@section('content') 
+ <!-- Begin Page Content -->
+  <div class="container-fluid">
 
-        /* Make sure the sidebar is fixed */
-        .sidebar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            width: 250px;
-            /* Adjust this to match your sidebar width */
-        }
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+    </div>
 
-        /* Ensure content doesn’t get hidden behind the sidebar */
-        .content-wrapper {
-            margin-left: 0px;
-            /* Adjust this to match the sidebar width */
-            padding-top: 20px;
-            padding-bottom: 20px;
-        }
+    <!-- Content Row -->
+    <div class="row">
 
-        @media (max-width: 768px) {
-            .sidebar {
-                position: absolute;
-                width: 100%;
-            }
-
-            .main-panel {
-                margin-left: 0;
-            }
-
-            .content-wrapper {
-                margin-left: 0;
-            }
-        }
-    </style>
-    <div class="main-panel">
-        <div class="content-wrapper">
-            <div class="row">
-                <div class="col-md-12 grid-margin">
-                    <div class="row">
-                        <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-                            <h3 class="font-weight-bold">Welcome Atmin</h3>
-                            <h6 class="font-weight-normal mb-0" style="line-height:1.5;">Anda dapat mengatur apa yang boleh dan tidak boleh ada di website ini, anda dapat menghapus atau memblokir berita dan akun user.</h6>
+        <!-- Earnings (Monthly) Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Earnings (Monthly)</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
                         </div>
-                        <div class="col-12 col-xl-4">
-                            <div class="justify-content-end d-flex">
-                                <div class="dropdown flex-md-grow-1 flex-xl-grow-0">
-                                    <button class="btn btn-sm btn-light bg-white dropdown-toggle" type="button"
-                                        id="dropdownMenuDate2" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="true">
-                                        <i class="mdi mdi-calendar"></i> Today (10 Jan 2021)
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuDate2">
-                                        <a class="dropdown-item" href="#">January - March</a>
-                                        <a class="dropdown-item" href="#">March - June</a>
-                                        <a class="dropdown-item" href="#">June - August</a>
-                                        <a class="dropdown-item" href="#">August - November</a>
+                        <div class="col-auto">
+                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Earnings (Monthly) Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                Earnings (Annual)</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Earnings (Monthly) Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks
+                            </div>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                                </div>
+                                <div class="col">
+                                    <div class="progress progress-sm mr-2">
+                                        <div class="progress-bar bg-info" role="progressbar"
+                                            style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+                                            aria-valuemax="100"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Statistics Section -->
-            <div class="row">
-              <div class="col-md-6 grid-margin stretch-card">
-                <div class="card tale-bg">
-                    <div class="card-people mt-auto">
-                        <div class="weather-info">
-                        </div>
-                    </div>
-                </div>
-            </div>            
-                <div class="col-md-6 grid-margin transparent">
-                    <div class="row">
-                        <div class="col-md-6 mb-4 stretch-card transparent">
-                            <div class="card card-tale">
-                                <div class="card-body">
-                                    <p class="mb-4">Total Pengguna</p>
-                                    <p class="fs-30 mb-2">4006</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4 stretch-card transparent">
-                            <div class="card card-dark-blue">
-                                <div class="card-body">
-                                    <p class="mb-4">Total Berita</p>
-                                    <p class="fs-30 mb-2">61344</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
-                            <div class="card card-light-blue">
-                                <div class="card-body">
-                                    <p class="mb-4">Berita belum ditanggapi</p>
-                                    <p class="fs-30 mb-2">34040</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 stretch-card transparent">
-                            <div class="card card-light-danger">
-                                <div class="card-body">
-                                    <p class="mb-4">Pengumuman</p>
-                                    <p class="fs-30 mb-2">47033</p>
-                                </div>
-                            </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Order Details Section -->
-            <div class="row">
-                <div class="col-md-6 grid-margin stretch-card">
-                    <div class="card">
-                        <div class="card-body">
-                            <p class="card-title">Order Details</p>
-                            <p class="font-weight-500">The total number of sessions within the date range. It is the period
-                                time a user is actively engaged with your website, page or app, etc</p>
-                            <div class="d-flex flex-wrap mb-5">
-                                <div class="mr-5 mt-3">
-                                    <p class="text-muted">Order value</p>
-                                    <h3 class="text-primary fs-30 font-weight-medium">12.3k</h3>
-                                </div>
-                                <div class="mr-5 mt-3">
-                                    <p class="text-muted">Orders</p>
-                                    <h3 class="text-primary fs-30 font-weight-medium">14k</h3>
-                                </div>
-                                <div class="mr-5 mt-3">
-                                    <p class="text-muted">Users</p>
-                                    <h3 class="text-primary fs-30 font-weight-medium">71.56%</h3>
-                                </div>
-                                <div class="mt-3">
-                                    <p class="text-muted">Downloads</p>
-                                    <h3 class="text-primary fs-30 font-weight-medium">34040</h3>
-                                </div>
-                            </div>
-                            <canvas id="order-chart"></canvas>
+        <!-- Pending Requests Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                Pending Requests</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Sales Report Section -->
-                <div class="col-md-6 grid-margin stretch-card">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between">
-                                <p class="card-title">Sales Report</p>
-                                <a href="#" class="text-info">View all</a>
-                            </div>
-                            <p class="font-weight-500">The total number of sessions within the date range. It is the period
-                                time a user is actively engaged with your website, page or app, etc</p>
-                            <div id="sales-legend" class="chartjs-legend mt-4 mb-2"></div>
-                            <canvas id="sales-chart"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Detailed Reports Section -->
-            <div class="row">
-                <div class="col-md-12 grid-margin stretch-card">
-                    <div class="card position-relative">
-                        <div class="card-body">
-                            <div id="detailedReports" class="carousel slide detailed-report-carousel position-static pt-2"
-                                data-ride="carousel">
-                                <div class="carousel-inner">
-                                    <!-- Carousel Item 1 -->
-                                    <div class="carousel-item active">
-                                        <div class="row">
-                                            <div class="col-md-12 col-xl-3 d-flex flex-column justify-content-start">
-                                                <div class="ml-xl-4 mt-3">
-                                                    <p class="card-title">Detailed Reports</p>
-                                                    <h1 class="text-primary">$34040</h1>
-                                                    <h3 class="font-weight-500 mb-xl-4 text-primary">North America</h3>
-                                                    <p class="mb-2 mb-xl-0">The total number of sessions within the date
-                                                        range. It is the period time a user is actively engaged with your
-                                                        website, page or app, etc</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12 col-xl-9">
-                                                <div class="row">
-                                                    <div class="col-md-6 border-right">
-                                                        <div class="table-responsive mb-3 mb-md-0 mt-3">
-                                                            <table class="table table-borderless report-table">
-                                                                <tr>
-                                                                    <td class="text-muted">Illinois</td>
-                                                                    <td class="w-100 px-0">
-                                                                        <div class="progress progress-md mx-4">
-                                                                            <div class="progress-bar bg-primary"
-                                                                                role="progressbar" style="width: 70%"
-                                                                                aria-valuenow="70" aria-valuemin="0"
-                                                                                aria-valuemax="100"></div>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <h5 class="font-weight-bold mb-0">713</h5>
-                                                                    </td>
-                                                                </tr>
-                                                                <!-- More rows as needed -->
-                                                            </table>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 mt-3">
-                                                        <canvas id="north-america-chart"></canvas>
-                                                        <div id="north-america-legend"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Add other carousel items here as needed -->
-                                </div>
-                            </div>
+                        <div class="col-auto">
+                            <i class="fas fa-comments fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
@@ -235,5 +97,237 @@
         </div>
     </div>
 
-    <!-- main-panel ends -->
-@endsection
+    <!-- Content Row -->
+
+    <div class="row">
+
+        <!-- Area Chart -->
+        <div class="col-xl-8 col-lg-7">
+            <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div
+                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
+                    <div class="dropdown no-arrow">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                            aria-labelledby="dropdownMenuLink">
+                            <div class="dropdown-header">Dropdown Header:</div>
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <div class="chart-area">
+                        <canvas id="myAreaChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pie Chart -->
+        <div class="col-xl-4 col-lg-5">
+            <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div
+                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
+                    <div class="dropdown no-arrow">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                            aria-labelledby="dropdownMenuLink">
+                            <div class="dropdown-header">Dropdown Header:</div>
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <div class="chart-pie pt-4 pb-2">
+                        <canvas id="myPieChart"></canvas>
+                    </div>
+                    <div class="mt-4 text-center small">
+                        <span class="mr-2">
+                            <i class="fas fa-circle text-primary"></i> Direct
+                        </span>
+                        <span class="mr-2">
+                            <i class="fas fa-circle text-success"></i> Social
+                        </span>
+                        <span class="mr-2">
+                            <i class="fas fa-circle text-info"></i> Referral
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content Row -->
+    <div class="row">
+
+        <!-- Content Column -->
+        <div class="col-lg-6 mb-4">
+
+            <!-- Project Card Example -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
+                </div>
+                <div class="card-body">
+                    <h4 class="small font-weight-bold">Server Migration <span
+                            class="float-right">20%</span></h4>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 20%"
+                            aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <h4 class="small font-weight-bold">Sales Tracking <span
+                            class="float-right">40%</span></h4>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 40%"
+                            aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <h4 class="small font-weight-bold">Customer Database <span
+                            class="float-right">60%</span></h4>
+                    <div class="progress mb-4">
+                        <div class="progress-bar" role="progressbar" style="width: 60%"
+                            aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <h4 class="small font-weight-bold">Payout Details <span
+                            class="float-right">80%</span></h4>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 80%"
+                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <h4 class="small font-weight-bold">Account Setup <span
+                            class="float-right">Complete!</span></h4>
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%"
+                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Color System -->
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card bg-primary text-white shadow">
+                        <div class="card-body">
+                            Primary
+                            <div class="text-white-50 small">#4e73df</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card bg-success text-white shadow">
+                        <div class="card-body">
+                            Success
+                            <div class="text-white-50 small">#1cc88a</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card bg-info text-white shadow">
+                        <div class="card-body">
+                            Info
+                            <div class="text-white-50 small">#36b9cc</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card bg-warning text-white shadow">
+                        <div class="card-body">
+                            Warning
+                            <div class="text-white-50 small">#f6c23e</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card bg-danger text-white shadow">
+                        <div class="card-body">
+                            Danger
+                            <div class="text-white-50 small">#e74a3b</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card bg-secondary text-white shadow">
+                        <div class="card-body">
+                            Secondary
+                            <div class="text-white-50 small">#858796</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card bg-light text-black shadow">
+                        <div class="card-body">
+                            Light
+                            <div class="text-black-50 small">#f8f9fc</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card bg-dark text-white shadow">
+                        <div class="card-body">
+                            Dark
+                            <div class="text-white-50 small">#5a5c69</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-lg-6 mb-4">
+
+            <!-- Illustrations -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Illustrations</h6>
+                </div>
+                <div class="card-body">
+                    <div class="text-center">
+                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                            src="{{ asset('assets-admin/img/undraw_posting_photo.svg') }}" alt="...">
+                    </div>
+                    <p>Add some quality, svg illustrations to your project courtesy of <a
+                            target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>, a
+                        constantly updated collection of beautiful svg images that you can use
+                        completely free and without attribution!</p>
+                    <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on
+                        unDraw &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Approach -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
+                </div>
+                <div class="card-body">
+                    <p>SB Admin 2 makes extensive use of Bootstrap 4 utility classes in order to reduce
+                        CSS bloat and poor page performance. Custom CSS classes are used to create
+                        custom components and custom utility classes.</p>
+                    <p class="mb-0">Before working with this theme, you should become familiar with the
+                        Bootstrap framework, especially the utility classes.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->
+@endsection 

@@ -9,7 +9,7 @@ class News extends Model
     use HasFactory;
 
     protected $fillable = [
-        'title', 'content', 'category_id', 'date'
+        'title', 'content', 'category_id', 'start-date', 'end-date', 
     ];
 
     // Relasi dengan Category
