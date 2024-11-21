@@ -15,13 +15,13 @@ class AnnouncementController extends Controller
     }
 
     // Tampilkan form untuk menambahkan pengumuman baru
-    public function createAnnouncement()
+    public function create()
     {
         return view('pages.admin.announcement.create');
     }
 
     // Simpan pengumuman baru ke database
-    public function storeAnnouncement(Request $request)
+    public function store(Request $request)
     {
         $request->validate([
             'title' => 'required|string|max:255',
@@ -57,21 +57,21 @@ class AnnouncementController extends Controller
     }
 
     // Tampilkan detail pengumuman
-    public function showAnnouncement($id)
+    public function show($id)
     {
         $announcement = Announcement::findOrFail($id);
         return view('pages.admin.announcement.show', compact('announcement'));
     }
 
     // Tampilkan form edit pengumuman
-    public function editAnnouncement($id)
+    public function edit($id)
     {
         $announcement = Announcement::findOrFail($id);
         return view('pages.admin.announcement.edit', compact('announcement'));
     }
 
     // Update pengumuman di database
-    public function updateAnnouncement(Request $request, $id)
+    public function update(Request $request, $id)
     {
         $request->validate([
             'title' => 'required|string|max:255',
@@ -101,7 +101,7 @@ class AnnouncementController extends Controller
     }
 
     // Hapus pengumuman
-    public function destroyAnnouncement($id)
+    public function destroy($id)
     {
         $announcement = Announcement::findOrFail($id);
 

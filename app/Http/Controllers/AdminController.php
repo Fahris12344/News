@@ -242,7 +242,7 @@ class AdminController extends Controller
 
         $news->update($data);
 
-        return redirect()->route('pages.news.index')->with('success', 'Berita berhasil diperbarui!');
+        return redirect()->route('pages.    admin.news.index')->with('success', 'Berita berhasil diperbarui!');
     }
 
     /**

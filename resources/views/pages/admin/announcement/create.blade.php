@@ -1,9 +1,9 @@
-@extends('layouts.admin') <!-- Use your layout file -->
+@extends('layouts.Admin-page.app') <!-- Use your layout file -->
 
 @section('content')
 <div class="container-fluid">
     <h2>Create New Announcement</h2>
-    <form action="{{ route('announcements.store') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('pages.admin.announcement.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <label for="title">Title</label>
