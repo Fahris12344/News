@@ -9,8 +9,8 @@
 
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title">Daftar Kategori</h3>
-            <a href="{{ route('kategori.create') }}" class="btn btn-primary float-right">Tambah Kategori</a>
+            <h3 class="card-title"><b>Daftar Kategori</b></h3>
+            <a href="{{ route('pages.admin.category.create') }}" class="btn btn-primary float-right">Tambah Kategori</a>
           </div>
           <div class="card-body">
             @if(session('success'))
@@ -23,13 +23,15 @@
             <table class="table table-bordered">
               <thead>
                 <tr>
+                  <th></th>
                   <th scope="col">Nama Kategori</th>
                   <th scope="col">Aksi</th>
                 </tr>
               </thead>
               <tbody>
-                @foreach ($categories as $category)
+                @foreach ($categories as $index => $category)
           <tr>
+            <td>{{$index +1 }}</td>
             <td>{{ $category->name }}</td>
             <td>
             <a href="{{ route('kategori.edit', $category->id) }}"
