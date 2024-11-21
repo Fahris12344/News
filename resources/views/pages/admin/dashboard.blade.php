@@ -1,4 +1,6 @@
-  <!-- Begin Page Content -->
+@extends('layouts.Admin-page.app')
+@section('content') 
+ <!-- Begin Page Content -->
   <div class="container-fluid">
 
     <!-- Page Heading -->
@@ -328,3 +330,4 @@
 
 </div>
 <!-- /.container-fluid -->
+@endsection 
