@@ -11,12 +11,12 @@
                 <span class="fa fa-bars"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto py-0">
-                    <a href="/" class="nav-item nav-link active">Home</a>
-                    <a href="/dashboard" class="nav-item nav-link">Dashboard</a>
-                    <a href="service.html" class="nav-item nav-link">Contact</a>
-                    
-                </div>
+              <div class="navbar-nav ms-auto py-0">
+                <a href="/" class="nav-item nav-link {{ request()->is('/') ? 'active' : '' }}">Home</a>
+                <a href="/about" class="nav-item nav-link {{ request()->is('about') ? 'active' : '' }}">Dashboard</a>
+                <a href="/contact" class="nav-item nav-link {{ request()->is('contact') ? 'active' : '' }}">Contact</a>
+            </div>
+            
                 @if (Auth::check())
                       <div class="dropdown d-inline">
                           <!-- Dropdown untuk Dashboard dan Logout -->

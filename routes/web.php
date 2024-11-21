@@ -50,6 +50,9 @@ Route::get('/news', function () {
     return view('news');
 });
 
+Route::get('/contact', function () {
+    return view('pages.contact.index');
+});
 // //admin
 // Route::get('/admin/dashboard', function () {
 //     return view('pages.admin.dashboard');
